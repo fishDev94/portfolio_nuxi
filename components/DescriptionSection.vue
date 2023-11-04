@@ -36,13 +36,23 @@ const flexDirection = computed(() => {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/styles/utils";
 .section-one {
   display: flex;
   height: 600px;
   background-color: rgb(240, 240, 240);
 
+  @include start-from(phone) {
+    flex-direction: column !important;
+    height: auto;
+  }
+
   &__img {
     width: 50%;
+
+    @include start-from(phone) {
+      width: auto;
+    }
   }
 
   &__container {
@@ -53,6 +63,10 @@ const flexDirection = computed(() => {
     justify-content: center;
     width: 50%;
     color: #574940;
+
+    @include start-from(phone) {
+      width: 100%;
+    }
 
     h2 {
       font-size: 32px;
