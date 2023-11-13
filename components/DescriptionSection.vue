@@ -1,11 +1,13 @@
 <template>
   <section class="section-one" :style="`flex-direction: ${flexDirection}`">
-    <img class="section-one__img" :src="imgSrc" alt="section-one-img" />
+    <div class="section-one__filter"></div>
+    <img class="section-one__img" :src="useAssets(imgSrc)" :alt="imgSrc" />
     <div class="section-one__container">
       <h2>{{ title }}</h2>
       <p>
         {{ description }}
       </p>
+      <AtomicButton v-if="btnText" class="section-one__btn" :title="btnText"/>
     </div>
   </section>
 </template>
@@ -23,6 +25,7 @@ const props = defineProps<{
   title: string;
   description: string;
   imgSrc: string;
+  btnText?: string;
   type: "illustration" | "description";
   positionImg?: "left" | "right";
 }>();
@@ -38,20 +41,37 @@ const flexDirection = computed(() => {
 <style lang="scss" scoped>
 @import "@/assets/styles/utils";
 .section-one {
+  position: relative;
   display: flex;
   height: 600px;
   background-color: rgb(240, 240, 240);
 
   @include start-from(phone) {
     flex-direction: column !important;
-    height: auto;
+    height: calc(100vh - 50px);
+  }
+
+  &__filter {
+    position: absolute;
+    background-color: #574940;
+    opacity: 0.6;
+    width: 50%;
+    height: 100%;
+
+    @include start-from(phone) {
+      height: 250px;
+      width: 100%;
+    }
   }
 
   &__img {
     width: 50%;
+    object-fit: cover;
 
     @include start-from(phone) {
       width: auto;
+      flex: 0 0 auto;
+      height: 250px;
     }
   }
 
@@ -59,13 +79,15 @@ const flexDirection = computed(() => {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 24px;
+    padding: 70px;
     justify-content: center;
     width: 50%;
     color: #574940;
 
     @include start-from(phone) {
       width: 100%;
+      padding: 30px 50px;
+      height: 100%;
     }
 
     h2 {
@@ -78,6 +100,10 @@ const flexDirection = computed(() => {
       font-size: 1.1rem;
       letter-spacing: 0.8px;
     }
+  }
+
+  &__btn {
+    align-self: flex-end;
   }
 }
 </style>

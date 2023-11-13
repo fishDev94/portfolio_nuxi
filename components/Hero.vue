@@ -10,7 +10,7 @@
           {{ passion }}
         </p>
       </div>
-      <button class="hero__main-content__discover-btn">Discover More</button>
+      <atomic-button class="hero__main-content__btn" title="Discover More"/>
     </div>
     <video class="hero__video" autoplay loop muted>
       <source :src="heroVideo" type="video/webm" />
@@ -98,32 +98,8 @@ const passions = ["Runner", "Software Engineer", "Musician"];
       }
     }
 
-    &__discover-btn {
-      font-family: "Raleway", sans-serif;
-      padding: 20px;
-      border: none;
-      border-radius: 4px;
-      flex: 0 0 auto;
-      width: 200px;
-      align-self: center;
+    &__btn {
       margin-top: 14px;
-      background-color: #574940;
-      font-weight: 800;
-      font-size: 0.85rem;
-      box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.082);
-      cursor: pointer;
-      transition: all 0.35s;
-
-      &:hover {
-        background-color: #776a62;
-      }
-
-      @include start-from(phone) {
-        width: 130px;
-        padding: 16px;
-        font-size: 0.7rem;
-        font-weight: 700;
-      }
     }
   }
 }

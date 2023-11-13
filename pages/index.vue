@@ -3,23 +3,20 @@
   <Hero />
   <main>
     <description-section
-      title="Musician"
-      :img-src="musicianImg"
-      :description="musicianDescription"
+      :title="info.softwareEngineer.title"
+      :img-src="info.softwareEngineer.img"
+      :description="info.softwareEngineer.description"
       type="illustration"
       position-img="right"
+      :btn-text="info.softwareEngineer.btnText"
     />
-    <SectionTwo />
+    <gallery />
   </main>
 </template>
 
 <script setup lang="ts">
-import musicianImg from "@/assets/sectionOne.png";
+import info from "@/data.json"
 
-const musicianDescription =
-  ref(`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque,
-        modi cumque sit provident vero facere laborum reiciendis doloremque
-        neque nemo et nobis quod iusto ratione eveniet, placeat dolorem ipsa!`);
 </script>
 
 <style lang="scss" scoped>

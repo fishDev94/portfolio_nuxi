@@ -1,0 +1,16 @@
+{
+    "musician": {
+        "title": "Musician",
+        "description": "Lorem ipsum dolor sit amet, consectetur adip"
+    },
+    "softwareEngineer": {
+        "title": "Software Engineer",
+        "description": "Front-end Developer Computer enthusiast since childhood. I have various experience in the tech field, such as photo editing and sound design. I currently work as a Software Engineer at TUI Musement with Nuxt and Vue Frameworks",
+        "img": "softwareEng.jpg",
+        "btnText": "Projects" 
+    },
+    "runner": {
+        "title": "Runner",
+        "description": "Lorem ipsum dolor sit amet, consectetur adip"
+    }
+}
