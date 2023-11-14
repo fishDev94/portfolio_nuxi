@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const cardsLength = new Array(10);
+import type { Project } from "../types/projects";
+
+defineProps<{
+  dataCard: Project[];
+}>();
 </script>
 
 <template>
@@ -7,8 +11,9 @@ const cardsLength = new Array(10);
     <atomic-carousel>
       <template #slides>
         <atomic-card
-          v-for="(_, index) in cardsLength"
-          :img-src="`https://picsum.photos/200/300?random=${index}`"
+          v-for="item in dataCard"
+          :title="item.title"
+          :img="item.img"
         />
       </template>
     </atomic-carousel>
@@ -16,14 +21,19 @@ const cardsLength = new Array(10);
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/styles/utils";
 .gallery {
   height: 600px;
   background-color: rgb(var(--primary));
-  padding: 70px 0;
+  padding: 70px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 18px;
   overflow: hidden;
+
+  @include start-from(phone) {
+    padding: 70px 0;
+  }
 }
 </style>

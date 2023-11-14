@@ -29,15 +29,29 @@ const scrollLeft = ref(0);
 const scrollWidth = ref(0);
 
 onMounted(() => {
-  (carousel.value! as HTMLDivElement)?.addEventListener("scroll", (e) => {
-    updateScrollValue(e);
-  });
+  const carouselRef = carousel.value! as HTMLDivElement;
+  if ("onscrollend" in window) {
+    carouselRef.addEventListener("scrollend", (e) => {
+      updateScrollValue(e);
+    });
+  } else {
+    carouselRef.onscroll = (event) => {
+      clearTimeout((window as any).scrollEndTimer);
+      (window as any).scrollEndTimer = setTimeout(
+        () => updateScrollValue(event),
+        100
+      );
+    };
+  }
 });
 
 onBeforeRouteLeave(() => {
-  (carousel.value! as HTMLDivElement)?.removeEventListener("scroll", (e) => {
-    updateScrollValue(e);
-  });
+  const carouselRef = carousel.value! as HTMLDivElement;
+  if ("onscrollend" in window) {
+    carouselRef.removeEventListener("scrollend", (e) => {
+      updateScrollValue(e);
+    });
+  }
 });
 
 const handleClick = (direction: "previous" | "next") => {
@@ -49,8 +63,10 @@ const handleClick = (direction: "previous" | "next") => {
   carouselEl.scroll({ left: scrollLeft, top: 0 });
 };
 
-const updateScrollValue = (e: Event): void => {
+const updateScrollValue = (e: Event) => {
   const targetScrollPosition = e.target as HTMLDivElement;
+
+  console.log(targetScrollPosition.scrollLeft);
 
   clientWidth.value = targetScrollPosition.clientWidth;
   scrollLeft.value = targetScrollPosition.scrollLeft;

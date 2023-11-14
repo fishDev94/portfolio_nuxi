@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "title": "GinTonic Nuxt3",
+      "img": "gintonic.jpg"
+    },
+    {
+      "title": "Polarix",
+      "img": "polarix.jpg"
+    },
+    {
+      "title": "Portfolio React",
+      "img": "portfolio_react.jpg"
+    },
+    {
+      "title": "Ecommerce JS",
+      "img": "ecommerce.jpg"
+    },
+    {
+      "title": "JediBook JS",
+      "img": "jedibook.jpg"
+    },
+    {
+      "title": "Crypto",
+      "img": "crypto.jpg"
+    }
+  ]
+}

@@ -1,14 +1,15 @@
 <script setup lang="ts">
 defineProps<{
-  imgSrc: string;
+  title: string;
+  img: string;
 }>();
 </script>
 
 <template>
   <div class="card">
-    <img class="card__img" :src="imgSrc" alt="lorem" />
+    <img class="card__img" :src="useAssets(`projects/${img}`)" alt="lorem" />
     <div class="card__description">
-      <h3>Project Title</h3>
+      <h3>{{ title }}</h3>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, rerum.
       </p>

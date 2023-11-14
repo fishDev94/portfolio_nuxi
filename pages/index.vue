@@ -10,12 +10,13 @@
       position-img="right"
       :btn-text="info.softwareEngineer.btnText"
     />
-    <gallery />
+    <gallery :data-card="projects.projects" />
   </main>
 </template>
 
 <script setup lang="ts">
 import info from "@/data.json";
+import projects from "@/projects.json";
 </script>
 
 <style lang="scss" scoped>
