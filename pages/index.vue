@@ -15,13 +15,12 @@
 </template>
 
 <script setup lang="ts">
-import info from "@/data.json"
-
+import info from "@/data.json";
 </script>
 
 <style lang="scss" scoped>
 main {
-  background-color: white;
+  background-color: rgb(var(--neutral));
   height: 100vh;
 }
 </style>

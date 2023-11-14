@@ -23,7 +23,7 @@ div {
   height: max-content;
 
   span {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(var(--neutral));
     height: 3px;
     width: 25px;
     transition: all 0.5s;

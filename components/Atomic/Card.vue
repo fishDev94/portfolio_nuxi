@@ -23,8 +23,8 @@ defineProps<{
   flex: 0 0 auto;
   width: 300px;
   height: 380px;
-  background-color: rgb(240, 240, 240);
-  border-radius: 4px;
+  background-color: rgb(var(--neutral));
+  border-radius: 24px;
   overflow: hidden;
 
   &__img {
@@ -42,11 +42,11 @@ defineProps<{
     height: 40%;
 
     h3 {
-      color: #433830;
+      color: rgb(var(--secondary));
     }
 
     p {
-      color: #574940;
+      color: rgb(var(--primary));
     }
   }
 }

@@ -26,7 +26,7 @@ nav {
   z-index: 9;
   width: 100%;
   display: flex;
-  background-color: #574940;
+  background-color: rgb(var(--primary));
   padding-inline: 20px;
   height: 50px;
   align-items: center;
@@ -69,7 +69,7 @@ nav {
       width: auto;
       text-align: auto;
       gap: 26px;
-      color: rgb(240, 240, 240);
+      color: rgb(var(--neutral));
       letter-spacing: 0.8px;
       font-size: 0.9rem;
       opacity: 1;

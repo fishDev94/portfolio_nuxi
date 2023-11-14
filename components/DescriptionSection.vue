@@ -7,7 +7,7 @@
       <p>
         {{ description }}
       </p>
-      <AtomicButton v-if="btnText" class="section-one__btn" :title="btnText"/>
+      <AtomicButton v-if="btnText" class="section-one__btn" :title="btnText" />
     </div>
   </section>
 </template>
@@ -53,7 +53,7 @@ const flexDirection = computed(() => {
 
   &__filter {
     position: absolute;
-    background-color: #574940;
+    background-color: rgb(var(--primary));
     opacity: 0.6;
     width: 50%;
     height: 100%;
@@ -82,7 +82,7 @@ const flexDirection = computed(() => {
     padding: 70px;
     justify-content: center;
     width: 50%;
-    color: #574940;
+    color: rgb(var(--primary));
 
     @include start-from(phone) {
       width: 100%;
@@ -92,11 +92,11 @@ const flexDirection = computed(() => {
 
     h2 {
       font-size: 32px;
-      color: #574940;
+      color: rgb(var(--primary));
     }
 
     p {
-      color: #574940;
+      color: rgb(var(--primary));
       font-size: 1.1rem;
       letter-spacing: 0.8px;
     }
