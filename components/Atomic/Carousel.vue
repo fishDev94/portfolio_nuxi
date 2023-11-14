@@ -43,10 +43,10 @@ onBeforeRouteLeave(() => {
 const handleClick = (direction: "previous" | "next") => {
   const carouselEl = carousel.value! as HTMLDivElement;
   const isPrev = direction === "previous";
-  const cardWidth = carouselEl?.children[0].getBoundingClientRect().width ?? 0;
-  const scrollLeft = carouselEl?.scrollLeft + (isPrev ? -cardWidth : cardWidth);
+  const cardWidth = carouselEl.children[0].getBoundingClientRect().width ?? 0;
+  const scrollLeft = carouselEl.scrollLeft + (isPrev ? -cardWidth : cardWidth);
 
-  carouselEl?.scroll({ left: scrollLeft, top: 0 });
+  carouselEl.scroll({ left: scrollLeft, top: 0 });
 };
 
 const updateScrollValue = (e: Event): void => {
@@ -77,6 +77,7 @@ const isMinScrollValue = computed((): boolean => {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/styles/utils";
 .carousel {
   position: relative;
   max-width: 1440px;
@@ -94,6 +95,10 @@ const isMinScrollValue = computed((): boolean => {
 
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    @include start-from(phone) {
+      margin: auto;
     }
   }
 
@@ -118,6 +123,10 @@ const isMinScrollValue = computed((): boolean => {
       cursor: pointer;
       pointer-events: all;
 
+      @include start-from(phone) {
+        display: none;
+      }
+
       &.inactive {
         opacity: 0;
         pointer-events: none;
@@ -135,6 +144,5 @@ const isMinScrollValue = computed((): boolean => {
 <style lang="scss">
 .card {
   scroll-snap-align: start;
-  scroll-margin: 5px;
 }
 </style>

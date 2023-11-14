@@ -19,7 +19,7 @@ const cardsLength = new Array(10);
 .gallery {
   height: 600px;
   background-color: rgb(var(--primary));
-  padding: 70px;
+  padding: 70px 0;
   display: flex;
   align-items: center;
   justify-content: center;

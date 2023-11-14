@@ -17,6 +17,7 @@ defineProps<{
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/styles/utils";
 .card {
   display: flex;
   flex-direction: column;
@@ -26,6 +27,11 @@ defineProps<{
   background-color: rgb(var(--neutral));
   border-radius: 24px;
   overflow: hidden;
+
+  @include start-from(phone) {
+    width: 320px;
+    height: 450px;
+  }
 
   &__img {
     width: 100%;
