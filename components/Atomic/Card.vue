@@ -1,17 +1,20 @@
 <script setup lang="ts">
+import type { Project } from "@/types/projects";
+
 defineProps<{
-  title: string;
-  img: string;
+  data: Project;
 }>();
 </script>
 
 <template>
   <div class="card">
-    <img class="card__img" :src="useAssets(`projects/${img}`)" alt="lorem" />
+    <img class="card__img" :src="useAssets(data.img)" alt="lorem" />
     <div class="card__description">
-      <h3>{{ title }}</h3>
+      <div class="card__description--title">
+        <h3>{{ data.title }}</h3>
+      </div>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, rerum.
+        {{ data.description }}
       </p>
     </div>
   </div>
@@ -23,14 +26,14 @@ defineProps<{
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
-  width: 300px;
-  height: 380px;
+  width: 360px;
+  height: 420px;
   background-color: rgb(var(--neutral));
   border-radius: 24px;
   overflow: hidden;
 
   @include start-from(phone) {
-    width: 320px;
+    width: 85%;
     height: 450px;
   }
 
@@ -44,15 +47,20 @@ defineProps<{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 8px;
     height: 40%;
 
-    h3 {
-      color: rgb(var(--secondary));
+    &--title {
+      h3 {
+        color: rgb(var(--secondary));
+      }
     }
 
     p {
+      display: flex;
+      align-items: flex-start;
+      height: 100%;
       color: rgb(var(--primary));
     }
   }

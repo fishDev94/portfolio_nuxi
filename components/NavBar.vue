@@ -3,19 +3,25 @@
     <Logo class="logo" />
     <HamMen :set-active-menu="setActiveMenu" :is-menu-active="isActive" />
     <ul class="menu-list" :class="`${isActive ? 'active' : ''}`">
-      <li v-for="item in menu">{{ item }}</li>
+      <li v-for="item in menu" @click="handleClick(item)">{{ item }}</li>
     </ul>
   </nav>
 </template>
 
 <script setup lang="ts">
+const emit = defineEmits<{
+  (e: "clickMenu", value: string): void;
+}>();
 const menu = ["Home", "My Projects", "Experiences", "About Me"];
-
 const isActive = ref(false);
 
 function setActiveMenu(): void {
   isActive.value = !isActive.value;
 }
+
+const handleClick = (value: string) => {
+  emit("clickMenu", value);
+};
 </script>
 
 <style lang="scss" scoped>
