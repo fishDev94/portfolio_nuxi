@@ -16,13 +16,15 @@ defineExpose({
 
 <template>
   <section class="gallery" ref="galleryRef">
-    <h2 class="gallery__title">{{ title || "Test" }}</h2>
-    <div class="gallery__wrapper">
-      <atomic-carousel>
-        <template #slides>
-          <atomic-card v-for="item in dataCard" :data="item" />
-        </template>
-      </atomic-carousel>
+    <div class="gallery-container">
+      <h2 class="gallery__title">{{ title || "Test" }}</h2>
+      <div class="gallery__wrapper">
+        <atomic-carousel>
+          <template #slides>
+            <atomic-card v-for="item in dataCard" :data="item" />
+          </template>
+        </atomic-carousel>
+      </div>
     </div>
   </section>
 </template>
@@ -33,12 +35,17 @@ defineExpose({
   height: auto;
   background-color: rgb(var(--primary));
   padding: 70px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
 
   @include start-from(phone) {
     padding: 70px 20px;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   &__wrapper {

@@ -3,27 +3,27 @@
     {
       "title": "GinTonic Nuxt3",
       "img": "projects/gintonic.jpg",
-      "description": "My first Nuxt3 project with Pinia State Management, it use an API made by me with Node Express (Node.js) and MongoDB"
+      "description": "My first Nuxt3 project with Pinia State Management uses an API made by me with Node Express (Node.js) and MongoDB."
     },
     {
       "title": "Polarix",
       "img": "projects/polarix.jpg",
-      "description": "Bootcamp final broject builded in Next.js (React) with Redux State Management"
+      "description": "Bootcamp final project built in Next.js (React) with Redux State Management."
     },
     {
       "title": "Portfolio React",
       "img": "projects/portfolio_react.jpg",
-      "description": "My first personal portfolio builded in React, it a simple single page application"
+      "description": "My first personal portfolio built in React. It's a simple, single-page application."
     },
     {
       "title": "Ecommerce JS",
       "img": "projects/ecommerce.jpg",
-      "description": "Bootcamp Javascript Project, it uses getter and setter methods for Render html and for call API, it store some data in LocalStorage."
+      "description": "Bootcamp Javascript Project uses getter and setter methods for rendering HTML and for calling an API. It stores some data in LocalStorage."
     },
     {
       "title": "JediBook JS",
       "img": "projects/jedibook.jpg",
-      "description": "Javascript Project Facebook like, it a simple project for connect with other users by a common API"
+      "description": "Facebook-like project made with JavaScript is a simple project to connect with other users through a common API."
     },
     {
       "title": "Crypto",

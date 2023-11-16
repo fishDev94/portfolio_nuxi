@@ -26,10 +26,6 @@ import projects from "@/projects.json";
 
 const projectsRef = ref();
 
-defineExpose({
-  projectsRef,
-});
-
 const handleClickMenu = (val: string) => {
   if (val === "Home") {
     window.scroll({
