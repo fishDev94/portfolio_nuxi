@@ -7,7 +7,13 @@
       <p>
         {{ description }}
       </p>
-      <AtomicButton v-if="btnText" class="section-one__btn" :title="btnText" />
+      <AtomicButton
+        v-if="btnText"
+        class="section-one__btn"
+        :title="btnText"
+        :id="btnText"
+        @click="(e: Event) => handleClick(e)"
+      />
     </div>
   </section>
 </template>
@@ -30,12 +36,21 @@ const props = defineProps<{
   positionImg?: "left" | "right";
 }>();
 
+const emit = defineEmits<{
+  (e: "buttonClick", value: string): void;
+}>();
+
 const flexDirection = computed(() => {
   let direction = "row";
   props.positionImg === "right" && (direction = "row-reverse");
 
   return direction;
 });
+
+const handleClick = ({ target }: Event) => {
+  const value = (target as HTMLButtonElement)!.id.toLocaleLowerCase();
+  emit("buttonClick", value);
+};
 </script>
 
 <style lang="scss" scoped>

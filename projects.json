@@ -30,5 +30,23 @@
       "img": "projects/crypto.jpg",
       "description": "Simple website layout in HTML and CSS"
     }
+  ],
+  "menu": [
+    {
+      "id": "home",
+      "title": "home"
+    },
+    {
+      "id": "projects",
+      "title": "my projects"
+    },
+    {
+      "id": "experiences",
+      "title": "experiences"
+    },
+    {
+      "id": "about",
+      "title": "about me"
+    }
   ]
 }
