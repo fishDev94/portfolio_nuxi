@@ -11,17 +11,13 @@
       :btn-text="info.softwareEngineer.btnText"
       @button-click="(value) => handleClick(value)"
     />
-    <gallery
-      ref="projectsRef"
-      :data-card="projects.projects"
-      title="My Projects"
-    />
+    <gallery ref="projectsRef" :data-card="projects" title="My Projects" />
   </main>
 </template>
 
 <script setup lang="ts">
 import info from "@/data.json";
-import projects from "@/projects.json";
+import { projects } from "@/projects.json";
 
 const projectsRef = ref();
 
@@ -37,6 +33,11 @@ const handleClick = (val: string) => {
     case "projects":
       projectsRef.value.galleryRef?.scrollIntoView({ behavior: "smooth" });
       break;
+    case "experiences":
+      console.log(val);
+      break;
+    case "about":
+      console.log(val);
     default:
       break;
   }

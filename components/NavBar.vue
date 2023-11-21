@@ -3,7 +3,7 @@
     <Logo class="logo" />
     <HamMen :set-active-menu="setActiveMenu" :is-menu-active="isActive" />
     <ul class="menu-list" :class="`${isActive ? 'active' : ''}`">
-      <li v-for="item in menu.menu" @click="handleClick(item.id)">
+      <li v-for="item in menu" @click="handleClick(item.id)">
         {{ item.title }}
       </li>
     </ul>
@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import menu from "~/projects.json";
+import { menu } from "@/projects.json";
 
 const emit = defineEmits<{
   (e: "clickMenu", value: string): void;
