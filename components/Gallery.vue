@@ -6,6 +6,7 @@ const galleryRef = ref();
 
 defineProps<{
   title?: string;
+  type?: string;
   dataCard: Project[];
 }>();
 
@@ -19,9 +20,9 @@ defineExpose({
     <div class="gallery-container">
       <h2 class="gallery__title">{{ title || "Test" }}</h2>
       <div class="gallery__wrapper">
-        <atomic-carousel>
+        <atomic-carousel :length="dataCard.length">
           <template #slides>
-            <atomic-card v-for="item in dataCard" :data="item" />
+            <atomic-card v-for="item in dataCard" :data="item" :type="type" />
           </template>
         </atomic-carousel>
       </div>
@@ -32,12 +33,14 @@ defineExpose({
 <style lang="scss" scoped>
 @import "@/assets/styles/utils";
 .gallery {
+  scroll-margin-top: 25vh;
   height: auto;
   background-color: rgb(var(--primary));
   padding: 70px 40px;
 
   @include start-from(phone) {
-    padding: 70px 20px;
+    scroll-margin-top: 0;
+    padding: 70px 0;
   }
 
   &-container {

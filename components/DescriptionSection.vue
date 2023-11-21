@@ -4,9 +4,10 @@
     <img class="section-one__img" :src="useAssets(imgSrc)" :alt="imgSrc" />
     <div class="section-one__container">
       <h2>{{ title }}</h2>
-      <p>
-        {{ description }}
-      </p>
+      <div
+        class="section-one__container--description"
+        v-html="description"
+      ></div>
       <AtomicButton
         v-if="btnText"
         class="section-one__btn"
@@ -110,10 +111,16 @@ const handleClick = ({ target }: Event) => {
       color: rgb(var(--primary));
     }
 
-    p {
+    &--description {
       color: rgb(var(--primary));
       font-size: 1.1rem;
       letter-spacing: 0.8px;
+
+      :deep(.link),
+      :deep(strong) {
+        color: rgb(var(--primary));
+        font-weight: 900;
+      }
     }
   }
 

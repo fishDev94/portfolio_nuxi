@@ -17,6 +17,12 @@
         <i class="pi pi-angle-right"></i>
       </button>
     </div>
+    <div class="carousel__pagination-container">
+      <span
+        v-for="(_, index) in Array(length)"
+        :class="isIndexVisible(index)"
+      ></span>
+    </div>
   </div>
 </template>
 
@@ -27,6 +33,12 @@ const carousel = ref(null);
 const clientWidth = ref(1);
 const scrollLeft = ref(0);
 const scrollWidth = ref(0);
+const prevScrollLeft = ref(0);
+const calculatedIndex = ref(0);
+
+defineProps<{
+  length: number;
+}>();
 
 onMounted(() => {
   const carouselRef = carousel.value! as HTMLDivElement;
@@ -65,12 +77,13 @@ const handleClick = (direction: "previous" | "next") => {
 
 const updateScrollValue = (e: Event) => {
   const targetScrollPosition = e.target as HTMLDivElement;
-
-  console.log(targetScrollPosition.scrollLeft);
+  const carouselEl = carousel.value! as HTMLDivElement;
+  const cardWidth = carouselEl.children[0].getBoundingClientRect().width ?? 0;
 
   clientWidth.value = targetScrollPosition.clientWidth;
   scrollLeft.value = targetScrollPosition.scrollLeft;
   scrollWidth.value = targetScrollPosition.scrollWidth;
+  calculatedIndex.value = Math.ceil(scrollLeft.value / cardWidth);
 };
 
 const isMaxScrollValue = computed((): boolean => {
@@ -90,6 +103,10 @@ const isMaxScrollValue = computed((): boolean => {
 const isMinScrollValue = computed((): boolean => {
   return scrollLeft.value === 0;
 });
+
+const isIndexVisible = (index: number): string => {
+  return index === calculatedIndex.value ? "active" : "";
+};
 </script>
 
 <style lang="scss" scoped>
@@ -107,6 +124,7 @@ const isMinScrollValue = computed((): boolean => {
     gap: 24px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
     -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
@@ -114,6 +132,7 @@ const isMinScrollValue = computed((): boolean => {
     }
 
     @include start-from(phone) {
+      gap: 0;
       margin: auto;
     }
   }
@@ -154,11 +173,47 @@ const isMinScrollValue = computed((): boolean => {
       }
     }
   }
+
+  &__pagination-container {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+
+    @include start-from(generic-desktop) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      height: 10px;
+      width: 10px;
+      background-color: rgba(0, 0, 0, 1);
+      opacity: 0.2;
+      border-radius: 100%;
+      transition: all 0.15s;
+
+      &.active {
+        opacity: 0.7;
+        transform: scale(1.2);
+      }
+    }
+  }
 }
 </style>
 
 <style lang="scss">
+@import "@/assets/styles/utils";
+
 .card {
   scroll-snap-align: start;
+
+  @include start-from(phone) {
+    scroll-snap-align: center;
+  }
 }
 </style>

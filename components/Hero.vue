@@ -10,16 +10,18 @@
           {{ passion }}
         </p>
       </div>
-      <atomic-button class="hero__main-content__btn" title="Discover More"/>
+      <atomic-button class="hero__main-content__btn" title="Discover More" />
     </div>
-    <video class="hero__video" autoplay loop muted>
+    <video class="hero__video" autoplay loop muted playsinline>
       <source :src="heroVideo" type="video/webm" />
+      <source :src="heroVideoMp4" type="video/mp4" />
     </video>
   </section>
 </template>
 
 <script setup lang="ts">
 import heroVideo from "@/assets/hero-rendered-720p.webm";
+import heroVideoMp4 from "@/assets/hero-rendered-720p.mp4";
 
 const passions = ["Runner", "Software Engineer", "Musician"];
 </script>

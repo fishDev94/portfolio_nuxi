@@ -1,7 +1,10 @@
 <template>
   <nav>
-    <Logo class="logo" />
-    <HamMen :set-active-menu="setActiveMenu" :is-menu-active="isActive" />
+    <Logo class="logo" @click="handleClick('home')" />
+    <atomic-ham-men
+      :set-active-menu="setActiveMenu"
+      :is-menu-active="isActive"
+    />
     <ul class="menu-list" :class="`${isActive ? 'active' : ''}`">
       <li v-for="item in menu" @click="handleClick(item.id)">
         {{ item.title }}
@@ -24,6 +27,7 @@ function setActiveMenu(): void {
 }
 
 const handleClick = (value: string) => {
+  isActive.value = false;
   emit("clickMenu", value);
 };
 </script>

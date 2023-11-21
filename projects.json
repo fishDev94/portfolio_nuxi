@@ -31,6 +31,43 @@
       "description": "Simple website layout in HTML and CSS"
     }
   ],
+  "runGallery": [
+    {
+      "title": "Cross Country",
+      "img": "runner/1.jpg",
+      "description": "6km Cross Country - 2023"
+    },
+    {
+      "title": "Road Run",
+      "img": "runner/2.jpg",
+      "description": "6km Road Run - 2022"
+    },
+    {
+      "title": "Cross Country",
+      "img": "runner/3.jpg",
+      "description": "Cross Country 3km - 2022"
+    },
+    {
+      "title": "800m",
+      "img": "runner/4.jpg",
+      "description": "800m 2:11PB - 2023"
+    },
+    {
+      "title": "Parkrun",
+      "img": "runner/5.jpg",
+      "description": "Parkrun 5km 19.08PB - 2022"
+    },
+    {
+      "title": "1500m",
+      "img": "runner/6.jpg",
+      "description": "1500m 4:37PB - 2023"
+    },
+    {
+      "title": "Half-Marathon",
+      "img": "runner/7.jpg",
+      "description": "Half-Marathon 1h30mPB - 2023"
+    }
+  ],
   "menu": [
     {
       "id": "home",

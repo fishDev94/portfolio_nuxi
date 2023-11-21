@@ -3,11 +3,12 @@ import type { Project } from "@/types/projects";
 
 defineProps<{
   data: Project;
+  type?: string;
 }>();
 </script>
 
 <template>
-  <div class="card">
+  <div :class="['card', type]">
     <img class="card__img" :src="useAssets(data.img)" alt="lorem" />
     <div class="card__description">
       <div class="card__description--title">
@@ -33,8 +34,9 @@ defineProps<{
   overflow: hidden;
 
   @include start-from(phone) {
-    width: 85%;
-    height: 450px;
+    width: 100%;
+    border-radius: 0;
+    height: 480px;
   }
 
   &__img {
@@ -62,6 +64,25 @@ defineProps<{
       align-items: flex-start;
       height: 100%;
       color: rgb(var(--primary));
+    }
+  }
+}
+
+.card.photo {
+  border-radius: 0;
+  width: 400px;
+
+  @include start-from(phone) {
+    width: 100%;
+    height: 80vh;
+  }
+  .card {
+    &__img {
+      height: 75%;
+    }
+
+    &__description {
+      height: 25%;
     }
   }
 }
