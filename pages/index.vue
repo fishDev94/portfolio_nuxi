@@ -27,6 +27,16 @@
 import info from "@/data.json";
 import { projects, runGallery } from "@/projects.json";
 
+useHead({
+  title: "Marco Guglielmino",
+  meta: [
+    {
+      name: "Marco Guglielmino",
+      content: "Software Engineer - Runner - Musician",
+    },
+  ],
+});
+
 const projectsRef = ref();
 
 const handleClick = (val: string) => {

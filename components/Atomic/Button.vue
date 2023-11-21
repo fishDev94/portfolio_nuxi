@@ -1,5 +1,5 @@
 <template>
-  <button class="btn">{{ title }}</button>
+  <button class="btn" :aria-label="title" role="button">{{ title }}</button>
 </template>
 
 <script setup lang="ts">

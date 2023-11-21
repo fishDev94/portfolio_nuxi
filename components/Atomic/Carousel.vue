@@ -7,12 +7,14 @@
       <button
         :class="`${isMinScrollValue ? 'inactive' : ''}`"
         @click="handleClick('previous')"
+        aria-label="arrow-left"
       >
         <i class="pi pi-angle-left"></i>
       </button>
       <button
         :class="`${isMaxScrollValue ? 'inactive' : ''}`"
         @click="handleClick('next')"
+        aria-label="arrow-right"
       >
         <i class="pi pi-angle-right"></i>
       </button>
