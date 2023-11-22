@@ -35,7 +35,6 @@ const carousel = ref(null);
 const clientWidth = ref(1);
 const scrollLeft = ref(0);
 const scrollWidth = ref(0);
-const prevScrollLeft = ref(0);
 const calculatedIndex = ref(0);
 
 defineProps<{
@@ -72,6 +71,7 @@ const handleClick = (direction: "previous" | "next") => {
   const carouselEl = carousel.value! as HTMLDivElement;
   const isPrev = direction === "previous";
   const cardWidth = carouselEl.children[0].getBoundingClientRect().width ?? 0;
+
   const scrollLeft = carouselEl.scrollLeft + (isPrev ? -cardWidth : cardWidth);
 
   carouselEl.scroll({ left: scrollLeft, top: 0 });
@@ -102,13 +102,10 @@ const isMaxScrollValue = computed((): boolean => {
   }
 });
 
-const isMinScrollValue = computed((): boolean => {
-  return scrollLeft.value === 0;
-});
+const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
 
-const isIndexVisible = (index: number): string => {
-  return index === calculatedIndex.value ? "active" : "";
-};
+const isIndexVisible = (index: number): string =>
+  index === calculatedIndex.value ? "active" : "";
 </script>
 
 <style lang="scss" scoped>

@@ -27,12 +27,14 @@ defineExpose({
         </atomic-carousel>
       </div>
     </div>
+    <div class="gallery--vignette"></div>
   </section>
 </template>
 
 <style lang="scss" scoped>
 @import "@/assets/styles/utils";
 .gallery {
+  position: relative;
   scroll-margin-top: 25vh;
   height: auto;
   background-color: rgb(var(--primary));
@@ -61,6 +63,33 @@ defineExpose({
 
   &__title {
     margin-left: 20px;
+  }
+
+  &--vignette {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    background: -moz-radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.7161239495798319) 100%
+    );
+    background: -webkit-radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.7161239495798319) 100%
+    );
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.7161239495798319) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
   }
 }
 </style>
