@@ -136,7 +136,6 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
     @include start-from(phone) {
       width: auto;
       flex: 0 0 auto;
-      height: 250px;
     }
   }
 
