@@ -1,5 +1,7 @@
 <template>
   <section
+    ref="sectionRef"
+    :id="title"
     class="section-description"
     :style="`flex-direction: ${flexDirection}`"
   >
@@ -15,13 +17,13 @@
         class="section-description__container--description"
         v-html="description"
       ></div>
-      <AtomicButton
+      <atomic-button
         v-if="btnText"
         class="section-description__btn"
-        :title="btnText"
         :id="btnText"
         @click="(e: Event) => handleClick(e)"
-      />
+        >{{ btnText }}</atomic-button
+      >
     </div>
     <div class="section-esagon" :style="backgroundPosition">
       <pattern-esagon-one class="esagon-one" />
@@ -33,6 +35,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 /** 
 / type: define the type of section
 / @illustration with image on left side and description on right side
@@ -40,6 +43,8 @@
 /
 /  positionImg: define the position of the img in the section
 */
+
+const sectionRef = ref(null);
 
 const props = defineProps<{
   title: string;
@@ -49,6 +54,10 @@ const props = defineProps<{
   type: "illustration" | "description";
   positionImg?: "left" | "right";
 }>();
+
+defineExpose({
+  sectionRef,
+});
 
 const emit = defineEmits<{
   (e: "buttonClick", value: string): void;

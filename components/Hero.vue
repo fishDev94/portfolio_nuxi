@@ -1,16 +1,32 @@
+<script setup lang="ts">
+import info from "@/data.json";
+import heroVideo from "@/assets/hero-rendered-720p.webm";
+import heroVideoMp4 from "@/assets/hero-rendered-720p.mp4";
+
+const handleDiscoverBtnClick = () => {
+  props.descriptionRef?.sectionRef.scrollIntoView();
+};
+
+const props = defineProps<{
+  descriptionRef?: any;
+}>();
+</script>
+
 <template>
   <section class="hero">
     <div class="hero__main-content">
       <h1 class="hero__main-content__title">Marco Guglielmino</h1>
       <div class="hero__main-content__passions">
-        <p
-          class="hero__main-content__passions-passion"
-          v-for="passion in passions"
-        >
-          {{ passion }}
+        <p class="hero__main-content__passions-passion" v-for="passion in info">
+          {{ passion.title }}
         </p>
       </div>
-      <atomic-button class="hero__main-content__btn" title="Discover More" />
+      <atomic-button
+        class="hero__main-content__btn"
+        title="Discover More"
+        @click="handleDiscoverBtnClick"
+        >Discover More <i class="pi pi-chevron-down"
+      /></atomic-button>
     </div>
     <video class="hero__video" autoplay loop muted playsinline>
       <source :src="heroVideo" type="video/webm" />
@@ -18,13 +34,6 @@
     </video>
   </section>
 </template>
-
-<script setup lang="ts">
-import heroVideo from "@/assets/hero-rendered-720p.webm";
-import heroVideoMp4 from "@/assets/hero-rendered-720p.mp4";
-
-const passions = ["Runner", "Software Engineer", "Musician"];
-</script>
 
 <style lang="scss" scoped>
 @import "@/assets/styles/utils";

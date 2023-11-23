@@ -1,12 +1,10 @@
 <template>
-  <button class="btn" :aria-label="title" role="button">{{ title }}</button>
+  <button class="btn" aria-label="generic-button" role="button">
+    <slot />
+  </button>
 </template>
 
-<script setup lang="ts">
-defineProps<{
-  title: string;
-}>();
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 @import "@/assets/styles/utils";
@@ -25,6 +23,11 @@ defineProps<{
   box-shadow: 0 0 12px 4px rgba(var(--neutral), 0.082);
   cursor: pointer;
   transition: all 0.35s;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  box-shadow: inset 0 0 16px rgba(255, 255, 255, 0.066);
 
   &:hover {
     background-color: rgb(var(--hover-btn));

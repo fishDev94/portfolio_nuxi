@@ -1,8 +1,9 @@
 <template>
   <NavBar @clickMenu="(e) => handleClick(e)" />
-  <Hero />
+  <Hero :description-ref="descriptionRef" />
   <main>
     <description-section
+      ref="descriptionRef"
       :title="info.softwareEngineer.title"
       :img-src="info.softwareEngineer.img"
       :description="info.softwareEngineer.description"
@@ -38,6 +39,7 @@ useHead({
 });
 
 const projectsRef = ref();
+const descriptionRef = ref();
 
 const handleClick = (val: string) => {
   switch (val) {

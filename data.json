@@ -1,7 +1,8 @@
 {
-  "musician": {
-    "title": "Musician",
-    "description": "Lorem ipsum dolor sit amet, consectetur adip"
+  "runner": {
+    "title": "Runner",
+    "img": "runner.jpeg",
+    "description": "Runner since I was a child, specialized in sprint and middle distance, today I run for the <strong>A.S.D. Team Atletica Palermo</strong>, my distances are <strong>1500m</strong> and <strong>800m</strong> on track but I also ran the <strong>half-marathon</strong> in 1h30m."
   },
   "softwareEngineer": {
     "title": "Software Engineer",
@@ -9,9 +10,8 @@
     "img": "softwareEng.jpg",
     "btnText": "Projects"
   },
-  "runner": {
-    "title": "Runner",
-    "img": "runner.jpeg",
-    "description": "Runner since I was a child, specialized in sprint and middle distance, today I run for the <strong>A.S.D. Team Atletica Palermo</strong>, my distances are <strong>1500m</strong> and <strong>800m</strong> on track but I also ran the <strong>half-marathon</strong> in 1h30m."
+  "musician": {
+    "title": "Musician",
+    "description": "Lorem ipsum dolor sit amet, consectetur adip"
   }
 }
