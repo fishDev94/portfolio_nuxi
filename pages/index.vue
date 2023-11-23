@@ -9,7 +9,7 @@
       :description="info.softwareEngineer.description"
       type="illustration"
       position-img="right"
-      :btn-text="info.softwareEngineer.btnText"
+      :buttons="info.softwareEngineer.buttons"
       @button-click="(value) => handleClick(value)"
     />
     <gallery ref="projectsRef" :data-card="projects" title="My Projects" />
@@ -21,12 +21,22 @@
       position-img="left"
     />
     <gallery :data-card="runGallery" title="Gallery" type="photo" />
+    <description-section
+      :title="info.musician.title"
+      :img-src="info.musician.img"
+      :description="info.musician.description"
+      :buttons="info.musician.buttons"
+      type="illustration"
+      position-img="right"
+      @button-click="(_, button) => urlButtonClick(button!)"
+    />
   </main>
 </template>
 
 <script setup lang="ts">
 import info from "@/data.json";
 import { projects, runGallery } from "@/projects.json";
+import type { ButtonInfo } from "~/types/buttonInfo";
 
 useHead({
   title: "Marco Guglielmino",
@@ -40,6 +50,10 @@ useHead({
 
 const projectsRef = ref();
 const descriptionRef = ref();
+
+const urlButtonClick = (button: ButtonInfo) => {
+  window.open(button.url, "__blank");
+};
 
 const handleClick = (val: string) => {
   switch (val) {

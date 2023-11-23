@@ -8,10 +8,25 @@
     "title": "Software Engineer",
     "description": "Front-end Developer Computer enthusiast since childhood. I have various experience in the tech field, such as photo editing and sound design. I currently work as a Software Engineer at <a class='link' href='https://tuiexperiences.com' target='_blank'>TUI Musement</a> with <strong>Nuxt</strong> and <strong>Vue</strong> Frameworks",
     "img": "softwareEng.jpg",
-    "btnText": "Projects"
+    "buttons": [
+      {
+        "title": "Projects"
+      }
+    ]
   },
   "musician": {
     "title": "Musician",
-    "description": "Lorem ipsum dolor sit amet, consectetur adip"
+    "description": "Since I was 8 years old, I started playing the piano, then the guitar, bass, and drums. During my adolescence, I had the opportunity to experiment with recording some songs with Cubase. Today, I write music that I publish on the most famous streaming services, such as Spotify, Apple Music, and Youtube.",
+    "img": "musician.png",
+    "buttons": [
+      {
+        "title": "Youtube",
+        "url": "https://www.youtube.com/@guglielminomarco"
+      },
+      {
+        "title": "Spotify",
+        "url": "https://open.spotify.com/artist/3hLIaiugShPRuStYRVz6XN?si=f17e863aadd14d40"
+      }
+    ]
   }
 }

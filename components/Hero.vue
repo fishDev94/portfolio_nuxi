@@ -28,7 +28,14 @@ const props = defineProps<{
         >Discover More <i class="pi pi-chevron-down"
       /></atomic-button>
     </div>
-    <video class="hero__video" autoplay loop muted playsinline>
+    <video
+      class="hero__video"
+      autoplay
+      loop
+      muted
+      playsinline
+      poster="@/assets/poster-video.jpg"
+    >
       <source :src="heroVideo" type="video/webm" />
       <source :src="heroVideoMp4" type="video/mp4" />
     </video>
