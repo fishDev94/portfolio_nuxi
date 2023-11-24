@@ -142,6 +142,7 @@ const isMinScrollValue = computed(() => {
   &__pagination-container {
     position: absolute;
     display: flex;
+    z-index: 2;
     gap: 6px;
     justify-content: center;
     align-items: center;
