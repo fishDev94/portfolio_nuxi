@@ -28,8 +28,8 @@
   box-shadow: inset 0 0 16px rgba(255, 255, 255, 0.066);
 
   :deep(svg) {
-    height: 16px;
-    transform: scale(1.4);
+    height: 14px;
+    transform: scale(1.5);
     margin-left: 5px;
     fill: rgba(var(--neutral));
   }

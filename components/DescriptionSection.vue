@@ -108,10 +108,13 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
   display: flex;
   height: 600px;
   background-color: rgb(240, 240, 240);
+  scroll-margin-top: 77px;
 
   @include start-from(phone) {
+    scroll-margin-top: 50px;
     flex-direction: column !important;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
+    height: max-content;
   }
 
   &__filter {
@@ -123,7 +126,8 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
     height: 100%;
 
     @include start-from(phone) {
-      height: 250px;
+      z-index: 3;
+      height: 35vh;
       width: 100%;
     }
   }
@@ -135,6 +139,7 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
 
     @include start-from(phone) {
       width: auto;
+      height: 35vh;
       flex: 0 0 auto;
     }
   }
@@ -151,8 +156,8 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
 
     @include start-from(phone) {
       width: 100%;
+      height: calc(65vh - 50px);
       padding: 30px 50px;
-      height: 100%;
     }
 
     h2 {
@@ -216,7 +221,7 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
       bottom: 0;
       top: auto;
       width: 100%;
-      height: 60%;
+      height: calc(65vh - 50px);
     }
 
     position: absolute;
@@ -253,9 +258,9 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
   .section-vignette {
     @include start-from(phone) {
       width: 100%;
-      height: 60%;
+      height: calc(65vh - 50px);
       bottom: 0;
-      top: auto;
+      top: 35vh;
     }
 
     position: absolute;

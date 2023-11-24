@@ -4,7 +4,8 @@ import heroVideo from "@/assets/hero-rendered-720p.webm";
 import heroVideoMp4 from "@/assets/hero-rendered-720p.mp4";
 
 const handleDiscoverBtnClick = () => {
-  props.descriptionRef?.sectionRef.scrollIntoView();
+  console.log("asdo");
+  props.descriptionRef?.sectionRef.scrollIntoView({ top: "50px" });
 };
 
 const props = defineProps<{
