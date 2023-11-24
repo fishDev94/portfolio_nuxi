@@ -85,5 +85,65 @@
       "id": "about",
       "title": "about me"
     }
+  ],
+  "experiences": [
+    {
+      "jobTitle": "Software Engineer",
+      "where": "TUI Musement",
+      "from": "November 2022",
+      "to": "Present",
+      "description": "Front end development in B2C and B2B e-commerce applications for tourism industry.",
+      "projects": [
+        {
+          "title": "Musement",
+          "url": "https://musement.com"
+        },
+        {
+          "title": "GoTUI",
+          "url": "https://gotui.com/things-to-do"
+        },
+        {
+          "title": "TUI Experiences",
+          "url": "https://tuiexperiences.com"
+        }
+      ],
+      "tools": [
+        "Vue 2 / Vue 3",
+        "Nuxt 2 / Nuxt 3",
+        "GitLab",
+        "Node.js",
+        "Node Express",
+        "Express Gateway",
+        "Jira",
+        "Agile/SCRUM"
+      ]
+    },
+    {
+      "jobTitle": "Frontend Developer",
+      "where": "Edgemony - Final Project",
+      "from": "September 2022",
+      "to": "October 2022",
+      "description": "The goal of the final project was to develop a fully-fledged travelling web app (mobile-first). I worked in a team with other four people in a SCRUM Agile framework.",
+      "projects": [
+        {
+          "title": "Polarix",
+          "url": "https://project-north.vercel.app/"
+        }
+      ],
+      "tools": ["Next.js", "React", "Vercel", "Sass", "Redux", "VS Code"]
+    },
+    {
+      "jobTitle": "Photograhper and Videomaker",
+      "where": "Freelance",
+      "from": "September 2017",
+      "to": "May 2021",
+      "description": "I worked in a Wedding Photography Studio where I learned the ability to work in a team to achieve a shared goal.",
+      "tools": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Adobe Indesign",
+        "Inkscape"
+      ]
+    }
   ]
 }

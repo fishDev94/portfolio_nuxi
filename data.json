@@ -1,9 +1,4 @@
 {
-  "runner": {
-    "title": "Runner",
-    "img": "runner.jpeg",
-    "description": "Runner since I was a child, specialized in sprint and middle distance, today I run for the <strong>A.S.D. Team Atletica Palermo</strong>, my distances are <strong>1500m</strong> and <strong>800m</strong> on track but I also ran the <strong>half-marathon</strong> in 1h30m."
-  },
   "softwareEngineer": {
     "title": "Software Engineer",
     "description": "Front-end Developer Computer enthusiast since childhood. I have various experience in the tech field, such as photo editing and sound design. I currently work as a Software Engineer at <a class='link' href='https://tuiexperiences.com' target='_blank'>TUI Musement</a> with <strong>Nuxt</strong> and <strong>Vue</strong> Frameworks",
@@ -13,6 +8,11 @@
         "title": "Projects"
       }
     ]
+  },
+  "runner": {
+    "title": "Runner",
+    "img": "runner.jpeg",
+    "description": "Runner since I was a child, specialized in sprint and middle distance, today I run for the <strong>A.S.D. Team Atletica Palermo</strong>, my distances are <strong>1500m</strong> and <strong>800m</strong> on track but I also ran the <strong>half-marathon</strong> in 1h30m."
   },
   "musician": {
     "title": "Musician",

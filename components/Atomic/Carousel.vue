@@ -22,7 +22,7 @@
     <div class="carousel__pagination-container">
       <span
         v-for="(_, index) in Array(length)"
-        :class="isIndexVisible(index)"
+        :class="isIndexVisible(index, calculatedIndex)"
       ></span>
     </div>
   </div>
@@ -103,9 +103,6 @@ const isMaxScrollValue = computed((): boolean => {
 });
 
 const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
-
-const isIndexVisible = (index: number): string =>
-  index === calculatedIndex.value ? "active" : "";
 </script>
 
 <style lang="scss" scoped>

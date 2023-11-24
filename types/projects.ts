@@ -3,3 +3,8 @@ export type Project = {
   img: string;
   description: string;
 };
+
+export type ExperienceProject = {
+  title: string;
+  url: string;
+};

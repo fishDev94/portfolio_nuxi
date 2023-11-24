@@ -69,7 +69,7 @@ defineProps<{
 }
 
 .card.photo {
-  border-radius: 0;
+  border-radius: 3px;
   width: 400px;
 
   @include start-from(phone) {

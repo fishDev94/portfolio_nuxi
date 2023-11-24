@@ -108,7 +108,7 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
 
   &__filter {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     background-color: rgb(var(--primary));
     opacity: 0.6;
     width: 50%;
@@ -140,7 +140,9 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
     gap: 16px;
     padding: 70px;
     justify-content: center;
+    align-content: center;
     width: 50%;
+    max-width: 720px;
     color: rgb(var(--primary));
 
     @include start-from(phone) {

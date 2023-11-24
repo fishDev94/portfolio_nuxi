@@ -31,7 +31,10 @@
       @button-click="(_, button) => urlButtonClick(button!)"
     />
     <video-section />
+    <experience-slider />
   </main>
+  <atomic-arrow-up ref="arrowUp" />
+  <footer-section />
 </template>
 
 <script setup lang="ts">
@@ -51,6 +54,26 @@ useHead({
 
 const projectsRef = ref();
 const descriptionRef = ref();
+const arrowUp = ref();
+
+onMounted(() => {
+  window.addEventListener("scroll", showArrowUp);
+  console.log((arrowUp.value.$el.style.display = "block"));
+});
+
+onBeforeRouteLeave(() => {
+  window.removeEventListener("scroll", showArrowUp);
+});
+
+const showArrowUp = () => {
+  if (window.scrollY > 800) {
+    arrowUp.value.$el.style.opacity = 1;
+    arrowUp.value.$el.style.pointerEvents = "all";
+  } else {
+    arrowUp.value.$el.style.opacity = 0;
+    arrowUp.value.$el.style.pointerEvents = "none";
+  }
+};
 
 const urlButtonClick = (button: ButtonInfo) => {
   window.open(button.url, "__blank");
@@ -82,6 +105,6 @@ const handleClick = (val: string) => {
 <style lang="scss" scoped>
 main {
   background-color: rgb(var(--neutral));
-  height: 100vh;
+  // height: 100vh;
 }
 </style>
