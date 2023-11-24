@@ -6,7 +6,18 @@ const scrollLeft = ref(0);
 const index = ref(0);
 
 onMounted(() => {
-  scroller.value.addEventListener("scrollend", updateScrollValue);
+  if ("onscrollend" in window) {
+    scroller.value.addEventListener("scrollend", updateScrollValue);
+  } else {
+    scroller.value.onscroll = () => {
+      clearTimeout((window as any).scrollEndTimer);
+      (window as any).scrollEndTimer = setTimeout(() => updateScrollValue, 100);
+    };
+  }
+});
+
+onBeforeRouteLeave(() => {
+  scroller.value.removeEventListener("scrollend", updateScrollValue);
 });
 
 const updateScrollValue = () => {
