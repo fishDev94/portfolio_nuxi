@@ -16,6 +16,37 @@ const updateScrollValue = () => {
 
   index.value = Math.floor(scrollLeft.value / card);
 };
+
+const handleClick = (direction: string) => {
+  const card = scroller.value.children[0].clientWidth ?? 0;
+
+  scroller.value.scroll({
+    top: 0,
+    left: scroller.value.scrollLeft + card,
+  });
+
+  if (direction === "next") {
+    ++index.value;
+    scroller.value.scroll({
+      top: 0,
+      left: scroller.value.scrollLeft + card,
+    });
+  } else {
+    --index.value;
+    scroller.value.scroll({
+      top: 0,
+      left: scroller.value.scrollLeft - card,
+    });
+  }
+};
+
+const isMaxScrollValue = computed(() => {
+  return index.value === experiences.length - 1;
+});
+
+const isMinScrollValue = computed(() => {
+  return index.value === 0;
+});
 </script>
 
 <template>
@@ -25,6 +56,22 @@ const updateScrollValue = () => {
         v-for="experience in experiences"
         :experience="experience"
       />
+    </div>
+    <div class="experiences__navigation-container">
+      <button
+        :class="`${isMinScrollValue ? 'inactive' : ''}`"
+        @click="handleClick('previous')"
+        aria-label="arrow-left"
+      >
+        <i class="pi pi-angle-left"></i>
+      </button>
+      <button
+        :class="`${isMaxScrollValue ? 'inactive' : ''}`"
+        @click="handleClick('next')"
+        aria-label="arrow-right"
+      >
+        <i class="pi pi-angle-right"></i>
+      </button>
     </div>
     <div class="experiences__pagination-container">
       <span
@@ -40,12 +87,56 @@ const updateScrollValue = () => {
 .experiences {
   position: relative;
 
+  @include start-from(generic-desktop) {
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.298);
+  }
+
   &-scroller {
     display: flex;
     overflow: scroll;
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+  }
+
+  &__navigation-container {
+    @include start-from(phone) {
+      display: none;
+    }
+
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    top: (225px + 20px);
+
+    button {
+      pointer-events: all;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      border: 0;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.537);
+
+      &.inactive {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      i {
+        color: rgb(var(--secondary));
+        font-size: 1.2rem;
+      }
+    }
   }
 
   &__pagination-container {
@@ -59,7 +150,10 @@ const updateScrollValue = () => {
     width: 100%;
 
     @include start-from(generic-desktop) {
-      display: none;
+      bottom: 0;
+      top: auto;
+      right: 25vw;
+      width: auto;
     }
 
     span {
@@ -70,6 +164,12 @@ const updateScrollValue = () => {
       opacity: 0.2;
       border-radius: 100%;
       transition: all 0.25s;
+
+      @include start-from(generic-desktop) {
+        background-color: rgba(var(--neutral), 1);
+        height: 7px;
+        width: 7px;
+      }
 
       &.active {
         opacity: 0.7;

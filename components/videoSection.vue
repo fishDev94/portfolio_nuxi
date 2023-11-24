@@ -46,7 +46,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px;
+    padding: 50px;
     z-index: 1;
     height: 100%;
   }

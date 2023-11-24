@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <section class="youtube">
-    <h2>{{ title }}</h2>
+    <h3>{{ title }}</h3>
     <iframe
       src="https://www.youtube.com/embed/urfqORZL1u0?si=uPiTaBimtAHxAHYq"
       title="YouTube video player"
@@ -24,7 +24,8 @@ defineProps<{
   display: flex;
   flex-direction: column;
   gap: 18px;
-  h2 {
+  h3 {
+    font-size: 1.3rem;
     width: 100%;
     text-align: left;
   }

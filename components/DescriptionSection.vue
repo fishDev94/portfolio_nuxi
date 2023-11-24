@@ -148,7 +148,7 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
     @include start-from(phone) {
       width: 100%;
       height: calc(65vh - 50px);
-      padding: 30px 50px;
+      padding: 40px 50px;
     }
 
     h2 {

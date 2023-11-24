@@ -122,9 +122,11 @@ const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
 
     &::-webkit-scrollbar {
-      display: none;
+      display: none; /* Safari and Chrome */
     }
 
     @include start-from(phone) {
