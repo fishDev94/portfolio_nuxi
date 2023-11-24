@@ -30,6 +30,7 @@
       position-img="right"
       @button-click="(_, button) => urlButtonClick(button!)"
     />
+    <video-section />
   </main>
 </template>
 
