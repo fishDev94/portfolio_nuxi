@@ -11,7 +11,7 @@ onMounted(() => {
   } else {
     scroller.value.onscroll = () => {
       clearTimeout((window as any).scrollEndTimer);
-      (window as any).scrollEndTimer = setTimeout(() => updateScrollValue, 100);
+      (window as any).scrollEndTimer = setTimeout(updateScrollValue, 100);
     };
   }
 });
