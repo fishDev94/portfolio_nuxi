@@ -59,6 +59,7 @@ defineProps<{
   scroll-snap-align: start;
   width: 100vw;
   background-color: rgb(var(--primary));
+  overflow: hidden;
 
   &_main {
     @include start-from(generic-desktop) {

@@ -105,6 +105,7 @@ const isMinScrollValue = computed(() => {
   &-scroller {
     display: flex;
     overflow: scroll;
+    height: max-content;
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     -webkit-overflow-scrolling: touch;
