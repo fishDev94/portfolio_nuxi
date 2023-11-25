@@ -209,9 +209,5 @@ const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
 
 .card {
   scroll-snap-align: start;
-
-  @include start-from(phone) {
-    scroll-snap-align: center;
-  }
 }
 </style>
