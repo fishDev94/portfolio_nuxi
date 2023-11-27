@@ -31,7 +31,7 @@
       @button-click="(_, button) => urlButtonClick(button!)"
     />
     <video-section />
-    <experience-slider />
+    <experience-slider ref="experienceSliderRef" />
   </main>
   <atomic-arrow-up ref="arrowUp" />
   <footer-section />
@@ -53,6 +53,7 @@ useHead({
 });
 
 const projectsRef = ref();
+const experienceSliderRef = ref();
 const descriptionRef = ref();
 const arrowUp = ref();
 
@@ -92,7 +93,9 @@ const handleClick = (val: string) => {
       projectsRef.value.galleryRef?.scrollIntoView({ behavior: "smooth" });
       break;
     case "experiences":
-      console.log(val);
+      experienceSliderRef.value.scroller?.scrollIntoView({
+        behavior: "smooth",
+      });
       break;
     case "about":
       console.log(val);

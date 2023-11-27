@@ -5,6 +5,10 @@ const scroller = ref();
 const scrollLeft = ref(0);
 const index = ref(0);
 
+defineExpose({
+  scroller,
+});
+
 onMounted(() => {
   if ("onscrollend" in window) {
     scroller.value.addEventListener("scrollend", updateScrollValue);

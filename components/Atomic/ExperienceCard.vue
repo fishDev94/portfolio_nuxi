@@ -1,7 +1,9 @@
 <template>
   <div class="card">
     <div class="card_main">
-      <h2>{{ experience.jobTitle }}</h2>
+      <h2 class="card_main--title">
+        {{ experience.jobTitle }} <span>@{{ experience.where }}</span>
+      </h2>
 
       <p>
         <span>{{ experience.from }}</span> -
@@ -76,8 +78,24 @@ defineProps<{
     gap: 8px;
     height: 25vh;
 
-    h2 {
+    &--title {
+      @include start-from(generic-desktop) {
+        flex-direction: row;
+        align-items: flex-end;
+      }
+
       color: rgb(var(--primary));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      padding: 0 20px;
+
+      span {
+        font-size: 1.15rem;
+      }
     }
 
     p {

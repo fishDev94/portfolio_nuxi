@@ -1,6 +1,6 @@
 <template>
   <atomic-button class="arrow-up" @click="() => handleArrowUpClick()"
-    ><i class="pi pi-angle-up"
+    ><i class="pi pi-angle-up" id="arrow-icon"
   /></atomic-button>
 </template>
 
@@ -26,6 +26,12 @@ const handleArrowUpClick = () => {
   border-radius: 100%;
   font-size: 1.4rem;
   transition: all 0.25s;
-  box-shadow: 0 0 12px rgba(var(--primary-10), 0.2);
+  box-shadow: 0 0 12px rgba(var(--neutral), 0.2);
+
+  #arrow-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>

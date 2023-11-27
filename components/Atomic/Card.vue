@@ -73,6 +73,7 @@ defineProps<{
   width: 400px;
 
   @include start-from(phone) {
+    border-radius: 0;
     width: 100%;
     height: 80vh;
   }
