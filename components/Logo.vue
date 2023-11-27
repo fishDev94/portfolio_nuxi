@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="logo-pw"
     version="1.1"
     viewBox="0 0 95.515 109.8"
     xml:space="preserve"
@@ -12,3 +13,9 @@
     />
   </svg>
 </template>
+
+<style scoped>
+.logo-pw {
+  cursor: pointer;
+}
+</style>
