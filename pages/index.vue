@@ -30,8 +30,11 @@
       position-img="right"
       @button-click="(_, button) => urlButtonClick(button!)"
     />
-    <video-section />
-    <experience-slider ref="experienceSliderRef" />
+    <section class="bg-section">
+      <div class="bg-section__overlay"></div>
+      <video-section />
+      <experiences-section ref="experienceSliderRef" />
+    </section>
   </main>
   <atomic-arrow-up ref="arrowUp" />
   <footer-section />
@@ -93,7 +96,7 @@ const handleClick = (val: string) => {
       projectsRef.value.galleryRef?.scrollIntoView({ behavior: "smooth" });
       break;
     case "experiences":
-      experienceSliderRef.value.scroller?.scrollIntoView({
+      experienceSliderRef.value.section?.scrollIntoView({
         behavior: "smooth",
       });
       break;
@@ -107,7 +110,38 @@ const handleClick = (val: string) => {
 
 <style lang="scss" scoped>
 main {
-  background-color: rgb(var(--neutral));
-  // height: 100vh;
+  .bg-section {
+    position: relative;
+    background-color: rgba(var(--primary));
+    overflow: hidden;
+    box-sizing: border-box;
+
+    &__overlay {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      width: 100%;
+      height: 100%;
+      background: rgb(255, 255, 255);
+      background: -moz-radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.7161239495798319) 100%
+      );
+      background: -webkit-radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.7161239495798319) 100%
+      );
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.7161239495798319) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+    }
+  }
 }
 </style>

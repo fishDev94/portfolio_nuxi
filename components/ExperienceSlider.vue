@@ -65,14 +65,14 @@ const isMinScrollValue = computed(() => {
 </script>
 
 <template>
-  <section class="experiences">
-    <div class="experiences-scroller" ref="scroller">
+  <section class="experiences--slider">
+    <div class="experiences--slider__scroller" ref="scroller">
       <atomic-experience-card
         v-for="experience in experiences"
         :experience="experience"
       />
     </div>
-    <div class="experiences__navigation-container">
+    <div class="experiences--slider__navigation-container">
       <button
         :class="`${isMinScrollValue ? 'inactive' : ''}`"
         @click="handleClick('previous')"
@@ -88,7 +88,7 @@ const isMinScrollValue = computed(() => {
         <i class="pi pi-angle-right"></i>
       </button>
     </div>
-    <div class="experiences__pagination-container">
+    <div class="experiences--slider__pagination-container">
       <span
         v-for="(_, idx) in Array(experiences.length)"
         :class="isIndexVisible(idx, index)"
@@ -99,14 +99,14 @@ const isMinScrollValue = computed(() => {
 
 <style lang="scss" scoped>
 @import "@/assets/styles/utils";
-.experiences {
+.experiences--slider {
   position: relative;
 
   @include start-from(generic-desktop) {
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.298);
   }
 
-  &-scroller {
+  &__scroller {
     display: flex;
     overflow: scroll;
     height: max-content;
@@ -137,6 +137,7 @@ const isMinScrollValue = computed(() => {
 
     button {
       pointer-events: all;
+      cursor: pointer;
       width: 40px;
       height: 40px;
       border-radius: 100%;

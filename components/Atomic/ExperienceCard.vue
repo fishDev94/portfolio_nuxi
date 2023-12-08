@@ -60,7 +60,7 @@ defineProps<{
   flex: 0 0 auto;
   scroll-snap-align: start;
   width: 100vw;
-  background-color: rgb(var(--primary));
+  background-color: rgb(var(--secondary));
   overflow: hidden;
 
   &_main {
@@ -121,8 +121,8 @@ defineProps<{
 
     z-index: 1;
     padding: 40px;
-    background-color: rgb(var(--primary));
-    min-height: calc(75vh - 50px);
+    background-color: rgb(var(--secondary));
+    min-height: calc(75vh - 50px - 70px);
     display: flex;
     flex-direction: column;
     justify-content: center;

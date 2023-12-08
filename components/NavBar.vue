@@ -37,8 +37,9 @@ const handleClick = (value: string) => {
 nav {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 9;
-  width: 100%;
+  width: 100vw;
   display: flex;
   background-color: rgb(var(--primary));
   padding-inline: 20px;
