@@ -24,6 +24,8 @@ defineProps<{
   display: flex;
   flex-direction: column;
   gap: 18px;
+  width: 100%;
+
   h3 {
     font-size: 1.3rem;
     width: 100%;
@@ -32,10 +34,10 @@ defineProps<{
 
   iframe {
     width: 100%;
-    height: 50vh;
+    height: 30vh;
 
     @include start-from(generic-desktop) {
-      height: 450px;
+      height: 420px;
       width: 700px;
     }
   }

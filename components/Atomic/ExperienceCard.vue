@@ -174,7 +174,7 @@ defineProps<{
     height: 100%;
     width: 100%;
     opacity: 0.008;
-    // height: 90vh;
+    pointer-events: none;
     box-shadow: 2px 2px 5px;
     background: #fff;
     filter: contrast(7);
@@ -186,6 +186,7 @@ defineProps<{
       right: 0;
       bottom: 0;
       left: 0;
+      pointer-events: none;
       background: radial-gradient(#000, transparent) 0 0/ 1.4em 1.4em space;
       -webkit-mask: var(--mask);
       mask: var(--mask);
@@ -203,6 +204,7 @@ defineProps<{
       height: 25vh;
     }
 
+    pointer-events: none;
     position: absolute;
     top: 0;
     opacity: 0.86;
@@ -216,6 +218,7 @@ defineProps<{
       }
 
       position: absolute;
+      pointer-events: none;
       opacity: 0.04;
       width: 50%;
       left: -100px;
@@ -225,6 +228,7 @@ defineProps<{
 
     .esagon-two {
       position: absolute;
+      pointer-events: none;
       opacity: 0.04;
       width: 40%;
       right: 0;
@@ -243,6 +247,7 @@ defineProps<{
     }
 
     position: absolute;
+    pointer-events: none;
     z-index: 1;
     left: 0;
     width: 50vw;
@@ -275,6 +280,7 @@ defineProps<{
       top: 25vh;
     }
 
+    pointer-events: none;
     position: absolute;
     z-index: 1;
     right: 0;

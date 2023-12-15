@@ -62,7 +62,6 @@ const arrowUp = ref();
 
 onMounted(() => {
   window.addEventListener("scroll", showArrowUp);
-  console.log((arrowUp.value.$el.style.display = "block"));
 });
 
 onBeforeRouteLeave(() => {
@@ -70,10 +69,10 @@ onBeforeRouteLeave(() => {
 });
 
 const showArrowUp = () => {
-  if (window.scrollY > 800) {
+  if (window.scrollY > 800 && arrowUp.value.$el) {
     arrowUp.value.$el.style.opacity = 1;
     arrowUp.value.$el.style.pointerEvents = "all";
-  } else {
+  } else if (arrowUp.value.$el) {
     arrowUp.value.$el.style.opacity = 0;
     arrowUp.value.$el.style.pointerEvents = "none";
   }

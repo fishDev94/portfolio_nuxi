@@ -2,11 +2,12 @@
 import { experiences } from "@/projects.json";
 
 const scroller = ref();
+const experiencesSection = ref();
 const scrollLeft = ref(0);
 const index = ref(0);
 
 defineExpose({
-  scroller,
+  experiencesSection,
 });
 
 onMounted(() => {
@@ -65,7 +66,7 @@ const isMinScrollValue = computed(() => {
 </script>
 
 <template>
-  <section class="experiences--slider">
+  <section class="experiences--slider" ref="experiencesSection">
     <div class="experiences--slider__scroller" ref="scroller">
       <atomic-experience-card
         v-for="experience in experiences"
@@ -101,6 +102,7 @@ const isMinScrollValue = computed(() => {
 @import "@/assets/styles/utils";
 .experiences--slider {
   position: relative;
+  scroll-margin-top: 50px;
 
   @include start-from(generic-desktop) {
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.298);
