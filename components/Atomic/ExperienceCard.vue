@@ -166,13 +166,14 @@ defineProps<{
   .section-background {
     @include start-from(phone) {
       height: 25vh;
+      width: 100%;
     }
 
     position: absolute;
     top: 0;
-    z-index: 0;
+    z-index: 999;
     height: 100%;
-    width: 100%;
+    width: 50%;
     opacity: 0.008;
     pointer-events: none;
     box-shadow: 2px 2px 5px;
