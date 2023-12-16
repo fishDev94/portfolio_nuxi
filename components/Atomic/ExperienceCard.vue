@@ -171,7 +171,7 @@ defineProps<{
 
     position: absolute;
     top: 0;
-    z-index: 999;
+    z-index: 0;
     height: 100%;
     width: 50%;
     opacity: 0.008;
