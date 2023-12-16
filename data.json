@@ -29,5 +29,19 @@
         "url": "https://open.spotify.com/artist/3hLIaiugShPRuStYRVz6XN?si=f17e863aadd14d40"
       }
     ]
+  },
+  "footer": {
+    "info": "Built with Nuxt3/Vue3",
+    "urls": [
+      { "name": "Github", "url": "https://github.com/marco94gug/" },
+      {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/in/marco-guglielmino/"
+      },
+      {
+        "name": "Source Code",
+        "url": "https://github.com/marco94gug/portfolio_nuxi/"
+      }
+    ]
   }
 }
