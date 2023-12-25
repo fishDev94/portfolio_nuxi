@@ -127,6 +127,11 @@ defineProps<{
     flex-direction: column;
     justify-content: center;
     gap: 18px;
+    color: rgb(var(--neutral));
+
+    a {
+      color: rgb(var(--neutral));
+    }
 
     .more-information {
       @include start-from(generic-desktop) {

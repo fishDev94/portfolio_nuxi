@@ -26,6 +26,7 @@
   gap: 10px;
   align-items: center;
   box-shadow: inset 0 0 16px rgba(255, 255, 255, 0.066);
+  color: rgb(var(--neutral));
 
   :deep(svg) {
     height: 14px;

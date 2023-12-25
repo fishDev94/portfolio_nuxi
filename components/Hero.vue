@@ -20,7 +20,10 @@ const props = defineProps<{
     <div class="hero__main-content">
       <h1 class="hero__main-content__title">Marco Guglielmino</h1>
       <div class="hero__main-content__passions">
-        <p class="hero__main-content__passions-passion" v-for="passion in info">
+        <p
+          class="hero__main-content__passions-passion"
+          v-for="passion in info.passions"
+        >
           {{ passion.title }}
         </p>
       </div>
@@ -56,6 +59,7 @@ const props = defineProps<{
   height: calc(100vh - 50px);
   margin-top: 50px;
   padding-bottom: 50px;
+  color: rgb(var(--neutral));
 
   @include start-from(generic-desktop) {
     height: calc(100vh - 77px);

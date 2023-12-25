@@ -26,6 +26,7 @@ defineExpose({
       font-size: 1.6rem;
     }
 
+    color: rgb(var(--neutral));
     width: 1400px;
     padding-inline: 40px;
     margin: 0 auto;

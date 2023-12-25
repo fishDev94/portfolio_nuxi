@@ -23,6 +23,7 @@
     padding: 20px;
     z-index: 1;
     height: 100%;
+    color: rgb(var(--neutral));
 
     &--text {
       width: 100%;

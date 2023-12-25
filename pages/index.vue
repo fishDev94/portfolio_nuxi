@@ -4,28 +4,28 @@
   <main>
     <description-section
       ref="descriptionRef"
-      :title="info.softwareEngineer.title"
-      :img-src="info.softwareEngineer.img"
-      :description="info.softwareEngineer.description"
+      :title="info.passions[0].title"
+      :img-src="info.passions[0].img"
+      :description="info.passions[0].description"
       type="illustration"
       position-img="right"
-      :buttons="info.softwareEngineer.buttons"
+      :buttons="info.passions[0].buttons"
       @button-click="(value) => handleClick(value)"
     />
     <gallery ref="projectsRef" :data-card="projects" title="My Projects" />
     <description-section
-      :title="info.runner.title"
-      :img-src="info.runner.img"
-      :description="info.runner.description"
+      :title="info.passions[1].title"
+      :img-src="info.passions[1].img"
+      :description="info.passions[1].description"
       type="illustration"
       position-img="left"
     />
     <gallery :data-card="runGallery" title="Gallery" type="photo" />
     <description-section
-      :title="info.musician.title"
-      :img-src="info.musician.img"
-      :description="info.musician.description"
-      :buttons="info.musician.buttons"
+      :title="info.passions[2].title"
+      :img-src="info.passions[2].img"
+      :description="info.passions[2].description"
+      :buttons="info.passions[2].buttons"
       type="illustration"
       position-img="right"
       @button-click="(_, button) => urlButtonClick(button!)"
@@ -34,6 +34,7 @@
       <div class="bg-section__overlay"></div>
       <video-section />
       <experiences-section ref="experienceSliderRef" />
+      <about-me :info="info.aboutMe" />
     </section>
   </main>
   <atomic-arrow-up ref="arrowUp" />
