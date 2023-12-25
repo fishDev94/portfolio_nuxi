@@ -3,7 +3,6 @@
     {
       "title": "Software Engineer",
       "description": "Frontender at <a href='https://www.tuigroup.com/en-en/about-us/about-tui-group/our-business/tui-musement' target='_blank'><strong>TUI Musement</strong></a> since November 2022, I work mainly with Nuxt2 and Vue2, but I also work with Node.js and Express Gateway, where I have the opportunity to see some hints of BackEnd. My current studies are aimed at Nuxt3/Vue3, and in my free time, I study Angular.",
-      "TO_DO-description": "Front-end Developer Computer enthusiast since childhood. I have various experience in the tech field, such as photo editing and sound design. I currently work as a Software Engineer at <a class='link' href='https://tuiexperiences.com' target='_blank'>TUI Musement</a> with <strong>Nuxt</strong> and <strong>Vue</strong> Frameworks",
       "img": "softwareEng.jpg",
       "buttons": [
         {
@@ -48,6 +47,21 @@
   },
   "aboutMe": {
     "description": "Front-end Developer Computer enthusiast since childhood. I have various experience in the tech field, such as photo editing and sound design. I currently work as a Software Engineer at <a class='link' href='https://tuiexperiences.com' target='_blank'>TUI Musement</a> with <strong>Nuxt</strong> and <strong>Vue</strong> Frameworks",
-    "img": "avatar.jpg"
+    "img": "avatar.jpg",
+    "urls": [
+      { "name": "Github", "url": "https://github.com/marco94gug/" },
+      {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/in/marco-guglielmino/"
+      },
+      {
+        "name": "Youtube",
+        "url": "https://www.youtube.com/@guglielminomarco"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/artist/3hLIaiugShPRuStYRVz6XN?si=f17e863aadd14d40"
+      }
+    ]
   }
 }
