@@ -6,10 +6,16 @@ defineProps<{
     urls: { name: string; url: string }[];
   };
 }>();
+
+const aboutMeRef = ref();
+
+defineExpose({
+  aboutMeRef,
+});
 </script>
 
 <template>
-  <div class="about-me">
+  <div class="about-me" ref="aboutMeRef">
     <div class="about-me__container">
       <h2>About Me</h2>
       <div class="about-me__container--avatar">
@@ -39,6 +45,7 @@ defineProps<{
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-margin-top: 50px;
 
   &__container {
     // max-width: 1440px;

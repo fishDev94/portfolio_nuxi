@@ -34,7 +34,7 @@
       <div class="bg-section__overlay"></div>
       <video-section />
       <experiences-section ref="experienceSliderRef" />
-      <about-me :info="info.aboutMe" />
+      <about-me :info="info.aboutMe" ref="aboutSection" />
     </section>
   </main>
   <atomic-arrow-up ref="arrowUp" />
@@ -60,6 +60,7 @@ const projectsRef = ref();
 const experienceSliderRef = ref();
 const descriptionRef = ref();
 const arrowUp = ref();
+const aboutSection = ref();
 
 onMounted(() => {
   window.addEventListener("scroll", showArrowUp);
@@ -101,7 +102,9 @@ const handleClick = (val: string) => {
       });
       break;
     case "about":
-      console.log(val);
+      aboutSection.value.aboutMeRef.scrollIntoView({
+        behavior: "smooth",
+      });
     default:
       break;
   }
