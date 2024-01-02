@@ -37,11 +37,13 @@ const scrollLeft = ref(0);
 const scrollWidth = ref(0);
 const calculatedIndex = ref(0);
 
-defineProps<{
+const { type } = defineProps<{
   length: number;
+  type?: string;
 }>();
 
 onMounted(() => {
+  console.log(type);
   const carouselRef = carousel.value! as HTMLDivElement;
   if ("onscrollend" in window) {
     carouselRef.addEventListener("scrollend", (e) => {

@@ -20,7 +20,7 @@ defineExpose({
     <div class="gallery-container">
       <h2 class="gallery__title">{{ title || "Gallery" }}</h2>
       <div class="gallery__wrapper">
-        <atomic-carousel :length="dataCard.length">
+        <atomic-carousel :length="dataCard.length" :type="type">
           <template #slides>
             <atomic-card v-for="item in dataCard" :data="item" :type="type" />
           </template>

@@ -71,6 +71,7 @@ defineProps<{
 .card.photo {
   border-radius: 3px;
   width: 400px;
+  position: relative;
 
   @include start-from(phone) {
     border-radius: 0;
@@ -79,11 +80,26 @@ defineProps<{
   }
   .card {
     &__img {
-      height: 75%;
+      height: 100%;
     }
 
     &__description {
-      height: 25%;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 18%;
+      background-color: rgba(var(--neutral-black), 0.6);
+      backdrop-filter: blur(2px);
+
+      &--title {
+        h3 {
+          color: rgb(var(--neutral));
+        }
+      }
+
+      p {
+        color: rgb(var(--neutral));
+      }
     }
   }
 }
