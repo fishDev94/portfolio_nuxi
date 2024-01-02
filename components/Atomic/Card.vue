@@ -76,7 +76,7 @@ defineProps<{
   @include start-from(phone) {
     border-radius: 0;
     width: 100%;
-    height: 80vh;
+    height: 75dvh;
   }
   .card {
     &__img {
@@ -90,6 +90,7 @@ defineProps<{
       height: 18%;
       background-color: rgba(var(--neutral-black), 0.6);
       backdrop-filter: blur(2px);
+      padding: 12px;
 
       &--title {
         h3 {

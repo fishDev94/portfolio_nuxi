@@ -22,7 +22,10 @@
     <div class="carousel__pagination-container">
       <span
         v-for="(_, index) in Array(length)"
-        :class="isIndexVisible(index, calculatedIndex)"
+        :class="`${type ? 'photo' : ''} ${isIndexVisible(
+          index,
+          calculatedIndex
+        )}`"
       ></span>
     </div>
   </div>
@@ -43,7 +46,6 @@ const { type } = defineProps<{
 }>();
 
 onMounted(() => {
-  console.log(type);
   const carouselRef = carousel.value! as HTMLDivElement;
   if ("onscrollend" in window) {
     carouselRef.addEventListener("scrollend", (e) => {
@@ -186,6 +188,10 @@ const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
 
     @include start-from(generic-desktop) {
       display: none;
+    }
+
+    .photo {
+      background-color: rgba(var(--neutral));
     }
 
     span {
