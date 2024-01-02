@@ -75,6 +75,7 @@ nav {
     transition: all 0.35s;
     font-size: 1rem;
     opacity: 0;
+    color: rgb(var(--neutral));
 
     @include start-from("generic-desktop") {
       flex-direction: row;

@@ -18,11 +18,13 @@ defineExpose({
   <div class="about-me" ref="aboutMeRef">
     <div class="about-me__container">
       <h2>About Me</h2>
-      <div class="about-me__container--avatar">
-        <div class="about-me__container__filter"></div>
-        <img :src="useAssets(info.img)" :alt="info.img" />
+      <div class="about-me__container--main">
+        <div class="about-me__container--text" v-html="info.description"></div>
+        <div class="about-me__container--avatar">
+          <div class="about-me__container__filter"></div>
+          <img :src="useAssets(info.img)" :alt="info.img" />
+        </div>
       </div>
-      <div class="about-me__container--text" v-html="info.description"></div>
       <p>Urls:</p>
       <ul class="about-me__container--contacts">
         <li v-for="url in info.urls">
@@ -48,21 +50,42 @@ defineExpose({
   scroll-margin-top: 50px;
 
   &__container {
-    // max-width: 1440px;
-    // min-width: 500px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
     padding: 40px;
     height: 80%;
     margin: 50px auto;
     background-color: rgb(var(--neutral));
 
+    @include start-from(desktop) {
+      max-width: 1440px;
+      margin: 70px;
+      border-radius: 24px;
+    }
+
     h2 {
       color: rgb(var(--secondary));
     }
 
+    &--main {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      @include start-from(desktop) {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
     &--avatar {
+      @include start-from(desktop) {
+        margin: 0;
+      }
+
+      flex-basis: auto;
       width: 150px;
       margin: 0 auto;
       border-radius: 8px;
@@ -85,6 +108,10 @@ defineExpose({
 
     &--text {
       color: rgb(var(--secondary));
+
+      @include start-from(desktop) {
+        width: 70%;
+      }
     }
 
     &--contacts {
