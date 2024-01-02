@@ -1,35 +1,36 @@
 {
-  "softwareEngineer": {
-    "title": "Software Engineer",
-    "description": "Frontender at <a href='https://www.tuigroup.com/en-en/about-us/about-tui-group/our-business/tui-musement' target='_blank'><strong>TUI Musement</strong></a> since November 2022, I work mainly with Nuxt2 and Vue2, but I also work with Node.js and Express Gateway, where I have the opportunity to see some hints of BackEnd. My current studies are aimed at Nuxt3/Vue3, and in my free time, I study Angular.",
-    "TO_DO-description": "Front-end Developer Computer enthusiast since childhood. I have various experience in the tech field, such as photo editing and sound design. I currently work as a Software Engineer at <a class='link' href='https://tuiexperiences.com' target='_blank'>TUI Musement</a> with <strong>Nuxt</strong> and <strong>Vue</strong> Frameworks",
-    "img": "softwareEng.jpg",
-    "buttons": [
-      {
-        "title": "Projects"
-      }
-    ]
-  },
-  "runner": {
-    "title": "Runner",
-    "img": "runner.jpeg",
-    "description": "Runner since I was a child, specialized in sprint and middle distance, today I run for the <strong>A.S.D. Team Atletica Palermo</strong>, my distances are <strong>1500m</strong> and <strong>800m</strong> on track but I also ran the <strong>half-marathon</strong> in 1h30m."
-  },
-  "musician": {
-    "title": "Musician",
-    "description": "Since I was 8 years old, I started playing the piano, then the guitar, bass, and drums. During my adolescence, I had the opportunity to experiment with recording some songs with Cubase. Today, I write music that I publish on the most famous streaming services, such as Spotify, Apple Music, and Youtube.",
-    "img": "musician.png",
-    "buttons": [
-      {
-        "title": "Youtube",
-        "url": "https://www.youtube.com/@guglielminomarco"
-      },
-      {
-        "title": "Spotify",
-        "url": "https://open.spotify.com/artist/3hLIaiugShPRuStYRVz6XN?si=f17e863aadd14d40"
-      }
-    ]
-  },
+  "passions": [
+    {
+      "title": "Software Engineer",
+      "description": "Frontender at <a href='https://www.tuigroup.com/en-en/about-us/about-tui-group/our-business/tui-musement' target='_blank'><strong>TUI Musement</strong></a> since November 2022, I work mainly with Nuxt2 and Vue2, but I also work with Node.js and Express Gateway, where I have the opportunity to see some hints of BackEnd. My current studies are aimed at Nuxt3/Vue3, and in my free time, I study Angular.",
+      "img": "softwareEng.jpg",
+      "buttons": [
+        {
+          "title": "Projects"
+        }
+      ]
+    },
+    {
+      "title": "Runner",
+      "img": "runner.jpeg",
+      "description": "Runner since I was a child, specialized in sprint and middle distance, today I run for the <strong>A.S.D. Team Atletica Palermo</strong>, my distances are <strong>1500m</strong> and <strong>800m</strong> on track but I also ran the <strong>half-marathon</strong> in 1h30m."
+    },
+    {
+      "title": "Musician",
+      "description": "Since I was 8 years old, I started playing the piano, then the guitar, bass, and drums. During my adolescence, I had the opportunity to experiment with recording some songs with Cubase. Today, I write music that I publish on the most famous streaming services, such as Spotify, Apple Music, and Youtube.",
+      "img": "musician.png",
+      "buttons": [
+        {
+          "title": "Youtube",
+          "url": "https://www.youtube.com/@guglielminomarco"
+        },
+        {
+          "title": "Spotify",
+          "url": "https://open.spotify.com/artist/3hLIaiugShPRuStYRVz6XN?si=f17e863aadd14d40"
+        }
+      ]
+    }
+  ],
   "footer": {
     "info": "Built with Nuxt3/Vue3",
     "urls": [
@@ -41,6 +42,25 @@
       {
         "name": "Source Code",
         "url": "https://github.com/marco94gug/portfolio_nuxi/"
+      }
+    ]
+  },
+  "aboutMe": {
+    "description": "Front-end Developer Computer enthusiast since childhood. I have various experience in the tech field, such as photo editing and sound design. I currently work as a Software Engineer at <a class='link' href='https://tuiexperiences.com' target='_blank'>TUI Musement</a> with <strong>Nuxt</strong> and <strong>Vue</strong> Frameworks",
+    "img": "avatar.jpg",
+    "urls": [
+      { "name": "Github", "url": "https://github.com/marco94gug/" },
+      {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/in/marco-guglielmino/"
+      },
+      {
+        "name": "Youtube",
+        "url": "https://www.youtube.com/@guglielminomarco"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/artist/3hLIaiugShPRuStYRVz6XN?si=f17e863aadd14d40"
       }
     ]
   }

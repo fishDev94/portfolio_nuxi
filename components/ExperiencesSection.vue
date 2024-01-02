@@ -21,11 +21,16 @@ defineExpose({
   flex-direction: column;
   gap: 20px;
 
+  @include start-from(desktop) {
+    scroll-margin-top: 50px;
+  }
+
   h2 {
     @include start-from(phone) {
       font-size: 1.6rem;
     }
 
+    color: rgb(var(--neutral));
     width: 1400px;
     padding-inline: 40px;
     margin: 0 auto;

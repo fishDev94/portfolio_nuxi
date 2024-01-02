@@ -25,6 +25,7 @@ footer {
   height: 100px;
   width: 100%;
   background-color: rgb(var(--primary-10));
+  color: rgb(var(--neutral));
 
   .footer--info {
     @include start-from(generic-desktop) {
@@ -62,6 +63,7 @@ footer {
 
       a {
         text-decoration: underline;
+        color: rgb(var(--neutral));
       }
     }
   }

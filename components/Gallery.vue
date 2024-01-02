@@ -18,7 +18,7 @@ defineExpose({
 <template>
   <section class="gallery" ref="galleryRef">
     <div class="gallery-container">
-      <h2 class="gallery__title">{{ title || "Test" }}</h2>
+      <h2 class="gallery__title">{{ title || "Gallery" }}</h2>
       <div class="gallery__wrapper">
         <atomic-carousel :length="dataCard.length">
           <template #slides>
@@ -63,6 +63,7 @@ defineExpose({
 
   &__title {
     margin-left: 20px;
+    color: rgb(var(--neutral));
   }
 
   &--vignette {
