@@ -119,6 +119,7 @@ const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
 
   &__scroller {
     margin: 0 20px;
+    // max-width: 1440px;
     display: flex;
     gap: 24px;
     overflow-x: scroll;
@@ -146,6 +147,7 @@ const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // max-width: 100%;
     height: calc(100% - 20px);
     pointer-events: none;
 
