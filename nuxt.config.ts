@@ -5,5 +5,6 @@ export default defineNuxtConfig({
   css: ["@/assets/styles/globals.scss", "primeicons/primeicons.css"],
   image: {
     provider: process.env.VERCEL_ENV ? "vercel" : "ipx",
+    format: ["webp", "jpg"],
   },
 });
