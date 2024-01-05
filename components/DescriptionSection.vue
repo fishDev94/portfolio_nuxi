@@ -6,11 +6,7 @@
     :style="`flex-direction: ${flexDirection}`"
   >
     <div class="section-description__filter"></div>
-    <img
-      class="section-description__img"
-      :src="useAssets(imgSrc)"
-      :alt="imgSrc"
-    />
+    <nuxt-img class="section-description__img" :src="imgSrc" :alt="imgSrc" />
     <div class="section-description__container">
       <h2>{{ title }}</h2>
       <div

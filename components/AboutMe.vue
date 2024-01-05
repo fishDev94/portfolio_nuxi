@@ -22,7 +22,7 @@ defineExpose({
         <div class="about-me__container--text" v-html="info.description"></div>
         <div class="about-me__container--avatar">
           <div class="about-me__container__filter"></div>
-          <img :src="useAssets(info.img)" :alt="info.img" />
+          <nuxt-img :src="info.img" :alt="info.img" />
         </div>
       </div>
       <p>Urls:</p>
