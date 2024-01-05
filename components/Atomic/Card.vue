@@ -14,6 +14,7 @@ defineProps<{
       class="card__img"
       :src="data.img"
       alt="Gallery Img"
+      loading="lazy"
     />
     <div class="card__description">
       <div class="card__description--title">

@@ -11,6 +11,7 @@
       class="section-description__img"
       :src="imgSrc"
       :alt="imgSrc"
+      loading="lazy"
     />
     <div class="section-description__container">
       <h2>{{ title }}</h2>
