@@ -3,13 +3,14 @@
     ref="sectionRef"
     :id="title"
     class="section-description"
-    :style="`flex-direction: ${flexDirection}`"
+    :style="`flex-direction:${flexDirection};`"
   >
     <div class="section-description__filter"></div>
-    <img
+    <nuxt-img
       class="section-description__img"
-      :src="useAssets(imgSrc)"
+      :src="imgSrc"
       :alt="imgSrc"
+      format="webp"
     />
     <div class="section-description__container">
       <h2>{{ title }}</h2>
@@ -191,7 +192,6 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
     height: 100%;
     width: 100%;
     opacity: 0.008;
-    // height: 90vh;
     box-shadow: 2px 2px 5px;
     background: #fff;
     filter: contrast(7);
