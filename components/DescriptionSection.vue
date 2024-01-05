@@ -3,7 +3,7 @@
     ref="sectionRef"
     :id="title"
     class="section-description"
-    :style="`flex-direction: ${flexDirection}`"
+    :style="`flex-direction:${flexDirection};`"
   >
     <div class="section-description__filter"></div>
     <nuxt-img
@@ -12,6 +12,9 @@
       :src="imgSrc"
       :alt="imgSrc"
       loading="lazy"
+      width="800px"
+      height="auto"
+      fit="cover"
     />
     <div class="section-description__container">
       <h2>{{ title }}</h2>

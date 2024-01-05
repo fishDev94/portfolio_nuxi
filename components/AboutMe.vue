@@ -27,6 +27,8 @@ defineExpose({
             :src="info.img"
             :alt="info.img"
             loading="lazy"
+            width="150px"
+            height="150px"
           />
         </div>
       </div>

@@ -15,6 +15,10 @@ defineProps<{
       :src="data.img"
       alt="Gallery Img"
       loading="lazy"
+      width="560px"
+      height="400px"
+      fit="cover"
+      sizes="sm: 800px"
     />
     <div class="card__description">
       <div class="card__description--title">
