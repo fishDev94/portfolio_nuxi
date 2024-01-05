@@ -40,7 +40,7 @@ const props = defineProps<{
       loop
       muted
       playsinline
-      poster="@/assets/poster-video.jpg"
+      poster="/poster-video.jpg"
     >
       <source :src="heroVideo" type="video/webm" />
       <source :src="heroVideoMp4" type="video/mp4" />
