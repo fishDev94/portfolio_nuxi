@@ -48,10 +48,23 @@ import type { ButtonInfo } from "~/types/buttonInfo";
 
 useHead({
   title: "Marco Guglielmino",
+  htmlAttrs: {
+    lang: "en",
+  },
   meta: [
     {
       name: "Marco Guglielmino",
       content: "Software Engineer - Runner - Musician",
+    },
+    {
+      name: "description",
+      content: "Marco Guglielmino - Portfolio Built in Nuxt 3",
+    },
+  ],
+  link: [
+    {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
     },
   ],
 });

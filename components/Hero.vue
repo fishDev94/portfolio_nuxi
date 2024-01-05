@@ -29,7 +29,7 @@ const props = defineProps<{
       </div>
       <atomic-button
         class="hero__main-content__btn"
-        title="Discover More"
+        name="Discover More"
         @click="handleDiscoverBtnClick"
         >Discover More <i class="pi pi-chevron-down"
       /></atomic-button>

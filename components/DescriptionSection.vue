@@ -24,6 +24,7 @@
           class="section-description__container--button-container__btn"
           :id="button.title"
           @click="(e: Event) => handleClick(e, button)"
+          :name="button.title"
           >{{ button.title }}
           <i
             v-if="button.title === 'Youtube'"

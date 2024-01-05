@@ -14,7 +14,7 @@
       <p>{{ experience.description }}</p>
       <div class="more-information">
         <div v-if="experience.projects" class="projects">
-          <h4>Projects:</h4>
+          <h3>Projects:</h3>
           <ul class="projects-list">
             <li v-for="project in experience.projects">
               <a :href="project.url" target="__blank">{{ project.title }}</a>
@@ -22,7 +22,7 @@
           </ul>
         </div>
         <div>
-          <h4>Tools:</h4>
+          <h3>Tools:</h3>
           <ul class="card_description--tool">
             <li v-for="tool in experience.tools">{{ tool }}</li>
           </ul>
@@ -161,7 +161,7 @@ defineProps<{
       }
     }
 
-    h4 {
+    h3 {
       font-weight: 900;
       font-family: Raleway, Arial, sans-serif;
       margin-bottom: 2px;

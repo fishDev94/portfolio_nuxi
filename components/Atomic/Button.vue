@@ -1,5 +1,15 @@
+<script setup lang="ts">
+defineProps<{
+  name?: string;
+}>();
+</script>
+
 <template>
-  <button class="btn-generic" aria-label="generic-button" role="button">
+  <button
+    class="btn-generic"
+    :aria-label="name ?? 'Generic Button'"
+    role="button"
+  >
     <slot />
   </button>
 </template>

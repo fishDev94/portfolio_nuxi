@@ -1,5 +1,8 @@
 <template>
-  <atomic-button class="arrow-up" @click="() => handleArrowUpClick()"
+  <atomic-button
+    class="arrow-up"
+    name="Arrow Up"
+    @click="() => handleArrowUpClick()"
     ><i class="pi pi-angle-up" id="arrow-icon"
   /></atomic-button>
 </template>
