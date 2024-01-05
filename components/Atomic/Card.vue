@@ -9,7 +9,6 @@ defineProps<{
 
 <template>
   <div :class="['card', type]">
-    <!-- <img class="card__img" :src="useAssets(data.img)" alt="lorem" /> -->
     <nuxt-img
       class="card__img"
       :src="data.img"
