@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import LiteYouTubeEmbed from "vue-lite-youtube-embed";
+import "vue-lite-youtube-embed/style.css";
 defineProps<{
   title: string;
 }>();
@@ -7,13 +9,17 @@ defineProps<{
 <template>
   <section class="youtube">
     <h3>{{ title }}</h3>
-    <iframe
+    <!-- <iframe
       src="https://www.youtube.com/embed/urfqORZL1u0?si=uPiTaBimtAHxAHYq"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
-    ></iframe>
+    ></iframe> -->
+    <LiteYouTubeEmbed
+      id="urfqORZL1u0"
+      title="Marco Guglielmino - Alive (Official Video)"
+    />
   </section>
 </template>
 

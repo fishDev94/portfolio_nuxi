@@ -18,8 +18,10 @@
   },
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0",
+    "lite-youtube-embed": "^0.3.0",
     "nuxi": "^3.10.0",
     "primeicons": "^6.0.1",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "vue-lite-youtube-embed": "^1.2.1"
   }
 }
