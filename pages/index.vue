@@ -1,6 +1,6 @@
 <template>
-  <NavBar @clickMenu="(e) => handleClick(e)" />
-  <Hero :description-ref="descriptionRef" />
+  <nav-bar @clickMenu="(e) => handleClick(e)" />
+  <main-hero :description-ref="descriptionRef" />
   <main>
     <description-section
       ref="descriptionRef"
@@ -44,6 +44,7 @@
 <script setup lang="ts">
 import info from "@/data.json";
 import { projects, runGallery } from "@/projects.json";
+import type MainHeroVue from "~/components/MainHero.vue";
 import type { ButtonInfo } from "~/types/buttonInfo";
 
 useHead({

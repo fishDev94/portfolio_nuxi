@@ -1,36 +1,3 @@
-<template>
-  <div class="carousel">
-    <div class="carousel__scroller" ref="carousel">
-      <slot name="slides"></slot>
-    </div>
-    <div class="carousel__navigation-container">
-      <button
-        :class="`${isMinScrollValue ? 'inactive' : ''}`"
-        @click="handleClick('previous')"
-        aria-label="arrow-left"
-      >
-        <i class="pi pi-angle-left"></i>
-      </button>
-      <button
-        :class="`${isMaxScrollValue ? 'inactive' : ''}`"
-        @click="handleClick('next')"
-        aria-label="arrow-right"
-      >
-        <i class="pi pi-angle-right"></i>
-      </button>
-    </div>
-    <div class="carousel__pagination-container">
-      <span
-        v-for="(_, index) in Array(length)"
-        :class="`${type ? 'photo' : ''} ${isIndexVisible(
-          index,
-          calculatedIndex
-        )}`"
-      ></span>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { ref } from "vue";
 
@@ -109,8 +76,42 @@ const isMaxScrollValue = computed((): boolean => {
 const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
 </script>
 
+<template>
+  <div class="carousel">
+    <div class="carousel__scroller" ref="carousel">
+      <slot name="slides"></slot>
+    </div>
+    <div class="carousel__navigation-container">
+      <button
+        :class="`${isMinScrollValue ? 'inactive' : ''}`"
+        @click="handleClick('previous')"
+        aria-label="arrow-left"
+      >
+        <i class="pi pi-angle-left"></i>
+      </button>
+      <button
+        :class="`${isMaxScrollValue ? 'inactive' : ''}`"
+        @click="handleClick('next')"
+        aria-label="arrow-right"
+      >
+        <i class="pi pi-angle-right"></i>
+      </button>
+    </div>
+    <div class="carousel__pagination-container">
+      <span
+        v-for="(_, index) in Array(length)"
+        :class="`${type ? 'photo' : ''} ${isIndexVisible(
+          index,
+          calculatedIndex
+        )}`"
+      ></span>
+    </div>
+  </div>
+</template>
+
 <style lang="scss" scoped>
 @import "@/assets/styles/utils";
+
 .carousel {
   position: relative;
   max-width: 1440px;

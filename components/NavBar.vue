@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <Logo class="logo" @click="handleClick('home')" />
+    <main-logo class="logo" @click="handleClick('home')" />
     <atomic-ham-men
       :set-active-menu="setActiveMenu"
       :is-menu-active="isActive"
