@@ -46,7 +46,7 @@
     ]
   },
   "aboutMe": {
-    "description": "Front-end Developer Computer enthusiast since childhood. I have various experience in the tech field, such as photo editing and sound design. I currently work as a Software Engineer at <a class='link' href='https://tuiexperiences.com' target='_blank'>TUI Musement</a> with <strong>Nuxt</strong> and <strong>Vue</strong> Frameworks",
+    "description": "I am a Software Engineer with a passion for creating innovative software solutions, working at <a class='link' href='https://tuimusement.com' target='_blank'>TUI Musement</a> since 2022. My experience ranges from frontend development with <strong>Vue 2, Vue 3, Nuxt 2, Nuxt 3,</strong> to backend with <strong>Node.js</strong> and <strong>Nest.js</strong>, up to the skills acquired in <strong>React</strong> and <strong>Next.js</strong>. This combination of knowledge allows me to build complete and high-performance web applications.",
     "img": "avatar.jpg",
     "urls": [
       { "name": "Github", "url": "https://github.com/marco94gug/" },
