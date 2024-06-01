@@ -34,14 +34,14 @@
   "footer": {
     "info": "Built with Nuxt3/Vue3",
     "urls": [
-      { "name": "Github", "url": "https://github.com/marco94gug/" },
+      { "name": "Github", "url": "https://github.com/fishdev94/" },
       {
         "name": "Linkedin",
         "url": "https://www.linkedin.com/in/marco-guglielmino/"
       },
       {
         "name": "Source Code",
-        "url": "https://github.com/marco94gug/portfolio_nuxi/"
+        "url": "https://github.com/fishdev94/portfolio_nuxi/"
       }
     ]
   },
@@ -49,7 +49,7 @@
     "description": "I am a Software Engineer with a passion for creating innovative software solutions, working at <a class='link' href='https://tuimusement.com' target='_blank'>TUI Musement</a> since 2022. My experience ranges from frontend development with <strong>Vue 2, Vue 3, Nuxt 2, Nuxt 3,</strong> to backend with <strong>Node.js</strong> and <strong>Nest.js</strong>, up to the skills acquired in <strong>React</strong> and <strong>Next.js</strong>. This combination of knowledge allows me to build complete and high-performance web applications.",
     "img": "avatar.jpg",
     "urls": [
-      { "name": "Github", "url": "https://github.com/marco94gug/" },
+      { "name": "Github", "url": "https://github.com/fishdev94/" },
       {
         "name": "Linkedin",
         "url": "https://www.linkedin.com/in/marco-guglielmino/"
