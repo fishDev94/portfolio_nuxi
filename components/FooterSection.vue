@@ -28,16 +28,16 @@ footer {
   color: rgb(var(--neutral));
 
   .footer--info {
-    @include start-from(generic-desktop) {
-      gap: 36px;
-    }
-
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
     height: 100%;
     gap: 20px;
+
+    @include start-from(generic-desktop) {
+      gap: 36px;
+    }
 
     &__about {
       display: flex;
@@ -53,13 +53,13 @@ footer {
     }
 
     &__urls {
-      @include start-from(generic-desktop) {
-        flex-direction: row;
-      }
-
       display: flex;
       flex-direction: column;
       gap: 6px;
+
+      @include start-from(generic-desktop) {
+        flex-direction: row;
+      }
 
       a {
         text-decoration: underline;

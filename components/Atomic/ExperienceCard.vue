@@ -51,11 +51,6 @@ defineProps<{
 <style lang="scss" scoped>
 @import "@/assets/styles/utils";
 .card {
-  @include start-from(generic-desktop) {
-    display: flex;
-    height: 550px;
-  }
-
   position: relative;
   flex: 0 0 auto;
   scroll-snap-align: start;
@@ -63,12 +58,12 @@ defineProps<{
   background-color: rgb(var(--secondary));
   overflow: hidden;
 
-  &_main {
-    @include start-from(generic-desktop) {
-      height: 100%;
-      width: 50vw;
-    }
+  @include start-from(generic-desktop) {
+    display: flex;
+    height: 550px;
+  }
 
+  &_main {
     background-color: rgb(var(--neutral));
     position: relative;
     display: flex;
@@ -78,12 +73,12 @@ defineProps<{
     gap: 8px;
     height: 25vh;
 
-    &--title {
-      @include start-from(generic-desktop) {
-        flex-direction: row;
-        align-items: flex-end;
-      }
+    @include start-from(generic-desktop) {
+      height: 100%;
+      width: 50vw;
+    }
 
+    &--title {
       color: rgb(var(--primary));
       display: flex;
       flex-direction: column;
@@ -92,6 +87,11 @@ defineProps<{
       gap: 4px;
       flex-wrap: wrap;
       padding: 0 20px;
+
+      @include start-from(generic-desktop) {
+        flex-direction: row;
+        align-items: flex-end;
+      }
 
       span {
         font-size: 1.15rem;
@@ -111,14 +111,6 @@ defineProps<{
   }
 
   &_description {
-    @include start-from(generic-desktop) {
-      height: 100%;
-      min-height: auto;
-      width: 50vw;
-      max-width: 720px;
-      justify-content: center;
-    }
-
     z-index: 1;
     padding: 40px;
     background-color: rgb(var(--secondary));
@@ -129,29 +121,38 @@ defineProps<{
     gap: 18px;
     color: rgb(var(--neutral));
 
+    @include start-from(generic-desktop) {
+      height: 100%;
+      min-height: auto;
+      width: 50vw;
+      max-width: 720px;
+      justify-content: center;
+    }
+
     a {
       color: rgb(var(--neutral));
     }
 
     .more-information {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
       @include start-from(generic-desktop) {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 28px;
       }
 
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
       .projects-list {
+        display: flex;
+        gap: 12px;
+        text-decoration: underline;
+
         @include start-from(generic-desktop) {
           flex-direction: column;
           gap: 2px;
         }
-
-        display: flex;
-        gap: 12px;
-        text-decoration: underline;
       }
 
       .card_description--tool {
@@ -169,11 +170,6 @@ defineProps<{
   }
 
   .section-background {
-    @include start-from(phone) {
-      height: 25vh;
-      width: 100%;
-    }
-
     position: absolute;
     top: 0;
     z-index: 0;
@@ -185,6 +181,11 @@ defineProps<{
     background: #fff;
     filter: contrast(7);
     --mask: linear-gradient(red, #{rgba(#000, 0.45)});
+
+    @include start-from(phone) {
+      height: 25vh;
+      width: 100%;
+    }
 
     &::before {
       position: absolute;
@@ -201,6 +202,13 @@ defineProps<{
   }
 
   .section-esagon {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    opacity: 0.86;
+    width: 50%;
+    height: 100%;
+
     @include start-from(phone) {
       position: absolute;
       opacity: 1;
@@ -210,19 +218,7 @@ defineProps<{
       height: 25vh;
     }
 
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    opacity: 0.86;
-    width: 50%;
-    height: 100%;
-
     .esagon-one {
-      @include start-from(phone) {
-        left: 0;
-        top: 0px;
-      }
-
       position: absolute;
       pointer-events: none;
       opacity: 0.04;
@@ -230,6 +226,11 @@ defineProps<{
       left: -100px;
       height: auto;
       fill: rgb(var(--primary));
+
+      @include start-from(phone) {
+        left: 0;
+        top: 0px;
+      }
     }
 
     .esagon-two {
@@ -245,13 +246,6 @@ defineProps<{
   }
 
   .section-vignette {
-    @include start-from(phone) {
-      width: 100%;
-      height: 25vh;
-      bottom: auto;
-      top: 0;
-    }
-
     position: absolute;
     pointer-events: none;
     z-index: 1;
@@ -276,16 +270,16 @@ defineProps<{
       rgba(0, 0, 0, 0.7161239495798319) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+
+    @include start-from(phone) {
+      width: 100%;
+      height: 25vh;
+      bottom: auto;
+      top: 0;
+    }
   }
 
   .section-vignette-two {
-    @include start-from(phone) {
-      width: 100%;
-      height: calc(75vh - 50px);
-      bottom: auto;
-      top: 25vh;
-    }
-
     pointer-events: none;
     position: absolute;
     z-index: 1;
@@ -310,6 +304,13 @@ defineProps<{
       rgba(0, 0, 0, 0.7161239495798319) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+
+    @include start-from(phone) {
+      width: 100%;
+      height: calc(75vh - 50px);
+      bottom: auto;
+      top: 25vh;
+    }
   }
 }
 </style>

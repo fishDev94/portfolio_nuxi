@@ -46,15 +46,15 @@ defineExpose({
 @import "@/assets/styles/utils.scss";
 
 .about-me {
-  @include start-from(desktop) {
-    min-height: calc(100dvh - 77px - 70px);
-  }
-
   min-height: calc(100dvh - 50px - 70px);
   display: flex;
   align-items: center;
   justify-content: center;
   scroll-margin-top: 50px;
+  
+  @include start-from(desktop) {
+    min-height: calc(100dvh - 77px - 70px);
+  }
 
   &__container {
     display: flex;
@@ -88,16 +88,16 @@ defineExpose({
     }
 
     &--avatar {
-      @include start-from(desktop) {
-        margin: 0;
-      }
-
       flex-basis: auto;
       width: 150px;
       margin: 0 auto;
       border-radius: 8px;
       overflow: hidden;
-
+      
+      @include start-from(desktop) {
+        margin: 0;
+      }
+      
       img {
         width: 100%;
       }
