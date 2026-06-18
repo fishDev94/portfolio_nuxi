@@ -88,7 +88,7 @@
   ],
   "experiences": [
     {
-      "jobTitle": "Software Engineer",
+      "jobTitle": "Senior Software Engineer",
       "where": "TUI Musement",
       "from": "November 2022",
       "to": "Present",
@@ -109,11 +109,13 @@
       ],
       "tools": [
         "Vue 2 / Vue 3",
-        "Nuxt 2 / Nuxt 3",
+        "Nuxt 3 / Nuxt 4",
         "GitLab",
         "Node.js",
         "Node Express",
         "Express Gateway",
+        "Dart",
+        "Flutter",
         "Jira",
         "Agile/SCRUM"
       ]
