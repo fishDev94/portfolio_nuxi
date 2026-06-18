@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { menu } from "@/projects.json";
+import { menu } from "@@/projects.json";
 
 const emit = defineEmits<{
   (e: "clickMenu", value: string): void;
@@ -33,7 +33,7 @@ const handleClick = (value: string) => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils";
+@use "@/assets/styles/utils" as *;
 nav {
   position: fixed;
   top: 0;

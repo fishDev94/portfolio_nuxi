@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { experiences } from "@/projects.json";
+import { experiences } from "@@/projects.json";
 
 const scroller = ref();
 const experiencesSection = ref();
@@ -99,7 +99,7 @@ const isMinScrollValue = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils";
+@use "@/assets/styles/utils" as *;
 .experiences--slider {
   position: relative;
   scroll-margin-top: 50px;
@@ -124,10 +124,6 @@ const isMinScrollValue = computed(() => {
   }
 
   &__navigation-container {
-    @include start-from(phone) {
-      display: none;
-    }
-
     position: absolute;
     pointer-events: none;
     z-index: 2;
@@ -136,6 +132,10 @@ const isMinScrollValue = computed(() => {
     justify-content: space-between;
     padding: 0 40px;
     top: (225px + 20px);
+
+    @include start-from(phone) {
+      display: none;
+    }
 
     button {
       pointer-events: all;

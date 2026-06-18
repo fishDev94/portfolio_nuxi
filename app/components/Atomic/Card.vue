@@ -32,7 +32,7 @@ defineProps<{
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils";
+@use "@/assets/styles/utils" as *;
 .card {
   display: flex;
   flex-direction: column;

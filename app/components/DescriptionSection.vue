@@ -97,7 +97,7 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils";
+@use "@/assets/styles/utils" as *;
 .section-description {
   position: relative;
   display: flex;
@@ -216,6 +216,12 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
   }
 
   .section-esagon {
+    position: absolute;
+    top: 0;
+    opacity: 0.86;
+    width: 50%;
+    height: 100%;
+
     @include start-from(phone) {
       position: absolute;
       opacity: 1;
@@ -225,24 +231,18 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
       height: calc(65vh - 50px);
     }
 
-    position: absolute;
-    top: 0;
-    opacity: 0.86;
-    width: 50%;
-    height: 100%;
-
     .esagon-one {
-      @include start-from(phone) {
-        left: 0;
-        top: 0px;
-      }
-
       position: absolute;
       opacity: 0.04;
       width: 50%;
       left: -100px;
       height: auto;
       fill: rgb(var(--primary));
+
+      @include start-from(phone) {
+        left: 0;
+        top: 0px;
+      }
     }
 
     .esagon-two {
@@ -257,13 +257,6 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
   }
 
   .section-vignette {
-    @include start-from(phone) {
-      width: 100%;
-      height: calc(65vh - 50px);
-      bottom: 0;
-      top: 35vh;
-    }
-
     position: absolute;
     z-index: 1;
     left: 0;
@@ -287,6 +280,13 @@ const handleClick = ({ target }: Event, button: ButtonInfo) => {
       rgba(0, 0, 0, 0.7161239495798319) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+
+    @include start-from(phone) {
+      width: 100%;
+      height: calc(65vh - 50px);
+      bottom: 0;
+      top: 35vh;
+    }
   }
 }
 </style>

@@ -12,7 +12,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils.scss";
+@use "@/assets/styles/utils" as *;
 .video-section {
   &__container {
     display: flex;

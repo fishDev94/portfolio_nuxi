@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import info from "@/data.json";
+import info from "@@/data.json";
 import heroVideo from "@/assets/hero-rendered-720p.webm";
 import heroVideoMp4 from "@/assets/hero-rendered-720p.mp4";
 
@@ -49,7 +49,7 @@ const props = defineProps<{
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils";
+@use "@/assets/styles/utils" as *;
 .hero {
   position: relative;
   display: flex;

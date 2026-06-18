@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/robots", "@nuxt/image", '@vercel/analytics'],
+  modules: ["@nuxtjs/robots", "@nuxt/image", "@vercel/analytics"],
   devtools: { enabled: true },
   css: ["@/assets/styles/globals.scss", "primeicons/primeicons.css"],
   image: {

@@ -15,7 +15,7 @@ defineProps<{
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils";
+@use "@/assets/styles/utils" as *;
 
 .btn-generic {
   font-family: "Raleway", sans-serif;

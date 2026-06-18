@@ -43,18 +43,18 @@ defineExpose({
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils.scss";
+@use "@/assets/styles/utils" as *;
 
 .about-me {
-  @include start-from(desktop) {
-    min-height: calc(100dvh - 77px - 70px);
-  }
-
   min-height: calc(100dvh - 50px - 70px);
   display: flex;
   align-items: center;
   justify-content: center;
   scroll-margin-top: 50px;
+
+  @include start-from(desktop) {
+    min-height: calc(100dvh - 77px - 70px);
+  }
 
   &__container {
     display: flex;
@@ -66,14 +66,14 @@ defineExpose({
     margin: 50px auto;
     background-color: rgb(var(--neutral));
 
+    h2 {
+      color: rgb(var(--secondary));
+    }
+
     @include start-from(desktop) {
       max-width: 1440px;
       margin: 70px;
       border-radius: 24px;
-    }
-
-    h2 {
-      color: rgb(var(--secondary));
     }
 
     &--main {
@@ -88,15 +88,15 @@ defineExpose({
     }
 
     &--avatar {
-      @include start-from(desktop) {
-        margin: 0;
-      }
-
       flex-basis: auto;
       width: 150px;
       margin: 0 auto;
       border-radius: 8px;
       overflow: hidden;
+
+      @include start-from(desktop) {
+        margin: 0;
+      }
 
       img {
         width: 100%;
