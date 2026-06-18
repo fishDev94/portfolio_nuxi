@@ -14,7 +14,7 @@ defineProps<{
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils";
+@use "@/assets/styles/utils" as *;
 
 div {
   display: flex;

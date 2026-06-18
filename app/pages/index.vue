@@ -42,10 +42,10 @@
 </template>
 
 <script setup lang="ts">
-import info from "@/data.json";
-import { projects, runGallery } from "@/projects.json";
-import type MainHeroVue from "~/components/MainHero.vue";
-import type { ButtonInfo } from "~/types/buttonInfo";
+import info from "@@/data.json";
+import { projects, runGallery } from "@@/projects.json";
+
+import type { ButtonInfo } from "@@/types/buttonInfo";
 
 useHead({
   title: "Marco Guglielmino",

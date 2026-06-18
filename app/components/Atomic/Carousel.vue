@@ -110,7 +110,7 @@ const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/utils";
+@use "@/assets/styles/utils" as *;
 
 .carousel {
   position: relative;
@@ -214,7 +214,7 @@ const isMinScrollValue = computed((): boolean => scrollLeft.value === 0);
 </style>
 
 <style lang="scss">
-@import "@/assets/styles/utils";
+@use "@/assets/styles/utils" as *;
 
 .card {
   scroll-snap-align: start;
