@@ -33,6 +33,11 @@
   ],
   "runGallery": [
     {
+      "title": "10km Valencia Ibercaja",
+      "img": "runner/0.png",
+      "description": "10km 36:36 (3:39min/km) - January 2026"
+    },
+    {
       "title": "Cross Country",
       "img": "runner/1.jpg",
       "description": "6km Cross Country - 2023"
