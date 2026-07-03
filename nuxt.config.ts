@@ -7,4 +7,10 @@ export default defineNuxtConfig({
     provider: process.env.VERCEL_ENV ? "vercel" : "ipx",
     format: ["webp", "jpg"],
   },
+  runtimeConfig: {
+    stravaClientSecret: "",
+    stravaRefreshToken: "",
+    stravaClientID: "",
+    stravaAccessToken: "",
+  },
 });
