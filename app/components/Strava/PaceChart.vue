@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import VueApexCharts from "vue3-apexcharts";
+const VueApexCharts = defineAsyncComponent(() => import("vue3-apexcharts"));
+
 import type { StravaActivity } from "@@/types/strava";
 
 const props = defineProps<{ activity: StravaActivity }>();
@@ -23,8 +24,10 @@ const chartOptions = {
 </script>
 
 <template>
-  <VueApexCharts
-    :options="chartOptions"
-    :series="[{ name: 'Ritmo', data: paceData }]"
-  />
+  <ClientOnly>
+    <VueApexCharts
+      :options="chartOptions"
+      :series="[{ name: 'Ritmo', data: paceData }]"
+    />
+  </ClientOnly>
 </template>

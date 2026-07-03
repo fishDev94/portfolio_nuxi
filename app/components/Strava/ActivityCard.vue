@@ -52,7 +52,7 @@ const elev = props.activity.total_elevation_gain;
 
       <!-- QUI IL TUO GRAFICO VERO -->
       <ClientOnly>
-        <StravaPaceChart :activity="activity" />
+        <StravaPaceChart :activity />
       </ClientOnly>
     </div>
   </UCard>
