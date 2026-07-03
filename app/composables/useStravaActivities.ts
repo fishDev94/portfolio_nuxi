@@ -1,7 +1,7 @@
 export const useStravaActivities = () => {
   const { data, pending, error } = useFetch("/api/activities", {
     onResponse({ response }) {
-      console.log("Strava activities (from composable):", response._data);
+      console.log("Strava activities success");
     },
     onRequestError({ error }) {
       console.error("Request error:", error);

@@ -47,8 +47,6 @@ import { projects, runGallery } from "@@/projects.json";
 
 import type { ButtonInfo } from "@@/types/buttonInfo";
 
-const data = useStravaActivities();
-
 useHead({
   title: "Marco Guglielmino",
   htmlAttrs: {

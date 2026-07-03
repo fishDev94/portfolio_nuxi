@@ -1,8 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/robots", "@nuxt/image", "@vercel/analytics"],
+  modules: ["@nuxtjs/robots", "@nuxt/image", "@vercel/analytics", "@nuxt/ui"],
   devtools: { enabled: true },
-  css: ["@/assets/styles/globals.scss", "primeicons/primeicons.css"],
+  css: [
+    "@/assets/styles/globals.scss",
+    "primeicons/primeicons.css",
+    "@/assets/styles/main.css",
+  ],
   image: {
     provider: process.env.VERCEL_ENV ? "vercel" : "ipx",
     format: ["webp", "jpg"],
